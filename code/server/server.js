@@ -1,8 +1,8 @@
-const express = require('express') 
-const { Server } = require('socket.io')
+const express = require('express');
+const { Server } = require('socket.io');
 const mongoose = require('mongoose'); 
-const cors = require('cors')
-const http = require('http')
+const cors = require('cors');
+const http = require('http');
 const fs = require('fs').promises 
 const { NlpManager } = require('node-nlp');
 const moment = require('moment'); 
@@ -10,10 +10,10 @@ const extractUrl = require('extract-urls');
 const email = require('node-email-extractor').default;
 const { findPhoneNumbersInText, findNumbers  } = require('libphonenumber-js');
 const { GetImageLocation, GetFile } = require('./firebase/getImage');
-const { ConnectDatabase } = require("./mongoDb/ConnectMongo");
+const { SaveData } = require('./firebase/models/userFeedback');
+
 // automatic train model
 const trainModel = require('./train'); 
-const { copyFileSync } = require('fs')
 
 const app = express() 
 app.use(cors())
@@ -73,14 +73,16 @@ io.on("connection", socket => {
             time: time, 
             typeData: typeData, 
         }
-        
+
         // send initial message to client
         socket.emit("receive-message", botMessageContent);      
     }
     
     // feedback contact user
     socket.on("save-data-to-db", (userFeedback) => {
-        console.log(ConnectDatabase());
+        if(SaveData(userFeedback)){
+            console.log("Data sent");
+        }
     });
 
     // when user send message 
@@ -295,5 +297,4 @@ const PORT = process.env.PORT || 4001;
 
 server.listen(PORT, () => { 
     console.log(`Server on port: ${PORT}`);
-    console.log("Db connected");
 })
