@@ -138,7 +138,9 @@ const Main = ({socket}) => {
                    <input type="text" 
                     value={emailAddress}
                     placeholder="Email Address"
-                    onChange={(e) => { setEmailAddress(e.target.value)}}/>
+                    onChange={(e) => { setEmailAddress(e.target.value)}}
+                    onKeyPress={(e) => e.key === "Enter" && sendFeedbackMessage()}
+                    />
                    
                    <textarea 
                     cols="30" 
