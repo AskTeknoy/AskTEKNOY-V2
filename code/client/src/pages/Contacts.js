@@ -13,7 +13,8 @@ const Contacts = ({socket}) => {
   const saveResponse = async () => {
 
     if(fullName !== "" && emailAddress !== "" && message !== ""){
-        const userFeedback = {
+        
+        const userContactData = {
             fullName: fullName, 
             emailAddress: emailAddress, 
             message: message, 
@@ -21,13 +22,13 @@ const Contacts = ({socket}) => {
         }
 
             // save data to database
-        await socket.emit("save-data-to-db", userFeedback); 
+        await socket.emit("save-contact-user", userContactData); 
   
     }
+
     setFullName(""); 
     setEmailAddress(""); 
-    setMesssage(""); 
-   
+    setMesssage("");  
   }
 
   return (
@@ -37,10 +38,12 @@ const Contacts = ({socket}) => {
                 <h2>Contact Us</h2>
                 <p>Got any questions to the team? Fill up the form <br/> below and we'll get in touch</p>
             </div>
+
             <div className='fields'>
                 <input type="text" value={fullName} placeholder='Full name' onChange={(e) => setFullName(e.target.value)} />
                 <input type="text" value={emailAddress} placeholder='Email address' onChange={(e) => setEmailAddress(e.target.value)}/>
             </div>   
+            
             <textarea 
             name="Message" 
             value={message} 

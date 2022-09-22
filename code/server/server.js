@@ -1,6 +1,5 @@
 const express = require('express');
 const { Server } = require('socket.io');
-const mongoose = require('mongoose'); 
 const cors = require('cors');
 const http = require('http');
 const fs = require('fs').promises 
@@ -10,7 +9,7 @@ const extractUrl = require('extract-urls');
 const email = require('node-email-extractor').default;
 const { findPhoneNumbersInText, findNumbers  } = require('libphonenumber-js');
 const { GetImageLocation, GetFile } = require('./firebase/getImage');
-const { SaveData } = require('./firebase/models/userFeedback');
+const { SaveData, SaveDataFeedback } = require('./firebase/models/userContact');
 
 // automatic train model
 const trainModel = require('./train'); 
@@ -78,12 +77,19 @@ io.on("connection", socket => {
         socket.emit("receive-message", botMessageContent);      
     }
     
-    // feedback contact user
-    socket.on("save-data-to-db", (userFeedback) => {
-        if(SaveData(userFeedback)){
-            console.log("Data sent");
+    // contact user
+    socket.on("save-contact-user", (userContactData) => {
+        if(SaveData(userContactData)){
+            console.log("contact message save");
         }
     });
+
+    // feedback user 
+    socket.on("user-feedback", (userFeedbackMessage) => {
+        if(SaveDataFeedback(userFeedbackMessage)){
+            console.log("feedback message save"); 
+        }
+    })
 
     // when user send message 
     socket.on("send-query", async (messageClient) => {

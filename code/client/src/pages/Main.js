@@ -3,8 +3,29 @@
 import React from 'react'
 import '../styles/Main.css';
 import { Link } from 'react-router-dom';
-const Main = () => {
-  return (
+import { useState } from 'react';
+
+const Main = ({socket}) => {
+    const [emailAddress, setEmailAddress] = useState("");
+    const [feedbackMessage, setFeedBackMessage] = useState(""); 
+    
+    const sendFeedbackMessage = () => {
+        if(emailAddress !== "" && feedbackMessage !== ""){
+            
+            const feedbackUserMessage = {
+                emailAddress: emailAddress, 
+                feedbackMessage: feedbackMessage, 
+            }
+
+            socket.emit("user-feedback", feedbackUserMessage); 
+             
+        }
+        
+        setEmailAddress("");  
+        setFeedBackMessage("");  
+    }
+
+    return (
     <section>
         <div className='intro'>
          
@@ -113,14 +134,25 @@ const Main = () => {
               <h2>Send Feedback Anytime</h2>
               <p>If you found any issues and suggestions on the chatbot, <br/> feel free to react out to the team.</p>
               <div className="form-section">
-                  <form action="">
-                      <input type="text" value="Email Address"/>
-                      <textarea name="message-feedback" cols="30" rows="10">Write your feedback here...</textarea>
-                  </form>
+                <div className="form-container">
+                   <input type="text" 
+                    value={emailAddress}
+                    placeholder="Email Address"
+                    onChange={(e) => { setEmailAddress(e.target.value)}}/>
+                   
+                   <textarea 
+                    cols="30" 
+                    rows="10" 
+                    value={feedbackMessage}
+                    placeholder='Write your message here...'
+                    onChange={(e) => { setFeedBackMessage(e.target.value)}}
+                    onKeyPress={(e) => e.key === "Enter" && sendFeedbackMessage()}
+                    ></textarea>            
+                </div>
               </div>
 
               <div className="feedback-btn">
-                  <a href="#">Send feedback</a>
+                  <button onClick={sendFeedbackMessage}>Send feedback</button>
               </div>
           </div>
       </div>

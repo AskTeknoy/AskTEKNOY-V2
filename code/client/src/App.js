@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
           <Navbar />
         <Routes>
-          <Route path='/' element={<Main />} />
+          <Route path='/' element={<Main socket={socket}/>} />
           <Route path='/chatbot' element={<Chat socket={socket} onClick={() => window.location.reload()}/>}  refresh="true"/>
           <Route path='/contacts' element={<Contacts socket={socket}/>}/>
         </Routes>

@@ -226,7 +226,7 @@ section .intro {
     margin: 50px 0;
 }
 
-.feedback .form .feedback-btn a{
+.feedback .form .feedback-btn button {
     background-color: #fff;
     text-align: center;
     color: #971921;
@@ -236,9 +236,12 @@ section .intro {
     border-radius: 7px;
     background-color: #FBD43E;
     font-weight: 700;
+    border: none; 
+    cursor: pointer;
 }
 
-.feedback .form .form-section input{
+
+.feedback .form .form-section .form-container input{
     position: relative;
     width: 100%;
     padding: 10px 15px;
@@ -247,7 +250,7 @@ section .intro {
     font-weight: 800;
 }
 
-.feedback .form .form-section textarea{
+.feedback .form .form-section .form-container textarea{
     width: 100%;
     padding: 10px 15px;
     font-family: 'Poppins', sans-serif;

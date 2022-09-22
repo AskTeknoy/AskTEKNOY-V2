@@ -8,7 +8,7 @@ body {
 
 .contact-container {
     position: relative;
-    margin: 100px 20% 0; 
+    margin: 70px 20% 0; 
     text-align: center;
     max-width: 900px;
     height: auto;
@@ -49,10 +49,14 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.fields textarea {
-    width: 780px;
-    height: 30px;
-    font-size: 12px;
+.fields input {
+    font-weight: 500;
+}
+
+textarea {
+    width: 800px;
+    font-size: 15px;
+    height: 200px;
     font-family: 'Poppins', sans-serif;
 }
 
