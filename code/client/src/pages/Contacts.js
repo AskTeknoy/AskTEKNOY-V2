@@ -17,7 +17,7 @@ const Contacts = ({socket}) => {
         
         // checks valid emails 
         if(validator.validate(emailAddress)){
-            console.log("valid email"); 
+
 
             // prepare data to save
             const userContactData = {
@@ -31,7 +31,6 @@ const Contacts = ({socket}) => {
              await socket.emit("save-contact-user", userContactData); 
         } 
         else { 
-            console.log("invalid email");
             setEmailAddress(""); 
             return;
         }

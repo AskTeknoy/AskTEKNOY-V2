@@ -240,6 +240,10 @@ section .intro {
     cursor: pointer;
 }
 
+.feedback .form .feedback-btn button:hover{
+    background-color: #971921;
+    color: #FBD43E;
+}
 
 .feedback .form .form-section .form-container input{
     position: relative;

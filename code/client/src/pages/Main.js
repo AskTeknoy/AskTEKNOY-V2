@@ -4,6 +4,7 @@ import React from 'react'
 import '../styles/Main.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import validator from 'email-validator'; 
 
 const Main = ({socket}) => {
     const [emailAddress, setEmailAddress] = useState("");
@@ -12,13 +13,17 @@ const Main = ({socket}) => {
     const sendFeedbackMessage = () => {
         if(emailAddress !== "" && feedbackMessage !== ""){
             
-            const feedbackUserMessage = {
-                emailAddress: emailAddress, 
-                feedbackMessage: feedbackMessage, 
-            }
+            if(validator.validate(emailAddress)){
+                const feedbackUserMessage = {
+                    emailAddress: emailAddress, 
+                    feedbackMessage: feedbackMessage, 
+                }
 
-            socket.emit("user-feedback", feedbackUserMessage); 
-             
+                socket.emit("user-feedback", feedbackUserMessage); 
+            }   
+            else {
+                setEmailAddress("");  
+            }
         }
         
         setEmailAddress("");  
