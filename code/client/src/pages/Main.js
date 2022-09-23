@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import validator from 'email-validator'; 
 import { Alert } from 'antd'; 
 
-import '../styles/Main.css';
 import 'antd/dist/antd.css';
+import '../styles/Main.css';
 
 const Main = ({socket}) => {
     const [emailAddress, setEmailAddress] = useState("");
@@ -54,7 +54,7 @@ const Main = ({socket}) => {
          
             <div className="description">
                 <div className="content">
-                    <h2>Start chatting with the new university inquiry bot</h2>
+                    <h2 className='title-intro'>Start chatting with the new university inquiry bot</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et vel cupiditate eos sed quod mollitia
                         vitae
                         at est perferendis expedita provident placeat consectetur adipisicing elit. Et vel cupiditate
@@ -154,7 +154,7 @@ const Main = ({socket}) => {
           <img src={require("./images/logo/girl2.png")} alt="Girl Picture"/>
 
           <div className="form">
-              <h2>Send Feedback Anytime</h2>
+              <h2 className='send-feedback-title'>Send Feedback Anytime</h2>
               <p>If you found any issues and suggestions on the chatbot, <br/> feel free to react out to the team.</p>
               
               {isSuccess &&
@@ -212,7 +212,7 @@ const Main = ({socket}) => {
       </div>
     
     <div className="chat-section">
-          <h2>Got your questions ready?</h2>
+          <h2 className='start-chat-title'>Got your questions ready?</h2>
           <Link to="/chatbot">Start Chat</Link>
       </div>
       <div className="footer-main">

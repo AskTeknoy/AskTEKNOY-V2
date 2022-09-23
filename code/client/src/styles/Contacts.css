@@ -27,6 +27,7 @@ body {
     margin-bottom: 0;
     margin-top: 0;
     color: #000;
+    font-weight: 700;
 }
 
 .contact-container .contact .descript-contact p {
@@ -78,6 +79,10 @@ textarea {
 .contact-container .send-btn button:hover{
     background-color: #FBD43E; 
     color: #971921;
+}
+
+.contact-container .contact .alerts {
+    margin-bottom: 20px;
 }
 
 

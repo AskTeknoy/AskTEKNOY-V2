@@ -17,10 +17,11 @@ section .intro {
     padding-bottom: 100px;
 }
 
-.description .content h2 {
+.description .content .title-intro {
     position: relative;
     font-size: 55px;
     max-width: 600px;
+    font-weight: 700;
 }
 
 .description .content p {
@@ -67,6 +68,7 @@ section .intro {
     font-size: 40px;
     text-align: center;
     margin-bottom: 2em;
+    font-weight: 700;
 }
 
 .features {
@@ -121,6 +123,7 @@ section .intro {
 
 .how-to-use .how-description h2{
     font-size: 50px;
+    font-weight: 700;
 }
 
 .how-to-use .how-description p{
@@ -201,12 +204,13 @@ section .intro {
     position: relative;
 }
 
-.feedback .form h2 { 
+.feedback .form .send-feedback-title { 
     color: #fff;
     text-align: center;
     font-size: 35px;
     padding-bottom: 0;
     margin-bottom: 0;
+    font-weight: 700;
 
 }
 
@@ -269,10 +273,11 @@ section .intro {
     padding: 5rem;
 }
 
-.chat-section h2{
+.chat-section .start-chat-title{
     font-size: 50px;
     max-width: 500px;
     padding-bottom: 40px;
+    font-weight: 700;
 }
 
 .chat-section a{

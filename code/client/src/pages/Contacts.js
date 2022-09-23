@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { Alert } from 'antd'; 
 import moment from 'moment';
 import validator from 'email-validator'; 
 
+import 'antd/dist/antd.css';
 import '../styles/Contacts.css';
 
 
@@ -10,15 +12,17 @@ const Contacts = ({socket}) => {
   const [fullName, setFullName] = useState("");
   const [emailAddress, setEmailAddress] = useState(""); 
   const [message, setMesssage] = useState("");
-
+  const [isErrorData, setIsErrorData] = useState(false); 
+  const [isSuccess, setIsSuccess] = useState(false); 
+  const [isInvalidEmail, setIsInvalidEmail] = useState(false); 
+  
   const saveResponse = async () => {
 
     if(fullName !== "" && emailAddress !== "" && message !== ""){
         
         // checks valid emails 
         if(validator.validate(emailAddress)){
-
-
+            
             // prepare data to save
             const userContactData = {
                 fullName: fullName, 
@@ -31,6 +35,7 @@ const Contacts = ({socket}) => {
              await socket.emit("save-contact-user", userContactData); 
         } 
         else { 
+            setIsInvalidEmail(true); 
             setEmailAddress(""); 
             return;
         }
@@ -41,6 +46,21 @@ const Contacts = ({socket}) => {
     setMesssage("");  
   }
 
+  
+  useEffect(() => {
+
+    // contacts from server response (firebase fetch)
+    socket.on("firebase-contacts", (dataContacts) => {
+        if(dataContacts.isSuccess){
+            setIsSuccess(dataContacts.isSuccess); 
+            return
+        }
+        else {
+            setIsErrorData(dataContacts.isSuccess);
+        }
+    })
+  }, [socket])
+
   return (
     <div className='contact-container'>
         <div className="contact">
@@ -49,6 +69,37 @@ const Contacts = ({socket}) => {
                 <p>Got any questions to the team? Fill up the form <br/> below and we'll get in touch</p>
             </div>
 
+        <div className='alerts'>
+     
+             {isSuccess &&
+                <Alert 
+                    type='success'
+                    message='Success'
+                    description="Your response have been saved"
+                    closable
+                    showIcon
+            />}
+
+            {isInvalidEmail &&
+                 <Alert 
+                    type='warning'
+                    message='Warning'
+                    description="Your email is invalid, please try again."
+                    closable
+                    showIcon
+            />}
+
+            
+            {isErrorData && 
+                <Alert 
+                    type='error'
+                    message='Error'
+                    description="Can't saved your query, please try again later."
+                    closable
+                    showIcon
+            />}
+        </div>
+           
             <div className='fields'>
                 <input 
                     type="text" 

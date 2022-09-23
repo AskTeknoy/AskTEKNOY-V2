@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div>
         <nav>
-            <div className="logo">Ask<span><Link to="/">TEKNOY</Link></span></div>
+            <div className="logo">Ask<span className='span-logo'><Link to="/">TEKNOY</Link></span></div>
             <ul>
             <li><Link to="/">Home</Link></li>
             <li><a href="#">About</a></li>

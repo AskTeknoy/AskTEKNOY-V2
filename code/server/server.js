@@ -13,6 +13,7 @@ const { SaveData, SaveDataFeedback } = require('./firebase/models/userContact');
 
 // automatic train model
 const trainModel = require('./train'); 
+const e = require('express');
 
 const app = express() 
 app.use(cors())
@@ -80,7 +81,11 @@ io.on("connection", socket => {
     // contact user
     socket.on("save-contact-user", (userContactData) => {
         if(SaveData(userContactData)){
-
+            console.log("data saved contact"); 
+            socket.emit("firebase-contacts", {isSuccess: true})
+        }
+        else {
+            socket.emit("firebase-contacts", {isSuccess: false})
         }
     });
 
