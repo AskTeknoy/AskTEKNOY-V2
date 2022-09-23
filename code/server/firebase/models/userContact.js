@@ -11,10 +11,10 @@ const ConnectDB = () => {
                 credential: admin.credential.cert(credentials)
         }); 
     }
-   
 
     // firebase db connection 
     const db = admin.firestore(); 
+
     console.log("connect to db"); 
 
     return db;

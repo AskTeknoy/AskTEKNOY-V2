@@ -10,9 +10,11 @@ const GetImageLocation = (intentImageFileName) => {
         .then((response) => { 
             console.log(response); 
             response.items.forEach((item) => {
-                getDownloadURL((item))
+                getDownloadURL(item)
                     .then((url) => {
-                        imageUrl = url; 
+                        console.log("url retrieve");
+
+                        return url;
                     }) 
             })
         })

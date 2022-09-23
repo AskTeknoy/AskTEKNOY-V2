@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
-import '../styles/Contacts.css';
-import { useState } from 'react'; 
+import React, { useState } from 'react'
 import moment from 'moment';
 import validator from 'email-validator'; 
+
+import '../styles/Contacts.css';
+
 
 const Contacts = ({socket}) => {
   const [fullName, setFullName] = useState("");
   const [emailAddress, setEmailAddress] = useState(""); 
   const [message, setMesssage] = useState("");
-
 
   const saveResponse = async () => {
 

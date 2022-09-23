@@ -24,6 +24,7 @@ body {
 .chat-window p {
   margin: 0;
 }
+
 .chat-window .chat-header {
   height: 45px;
   border-radius: 6px; 
@@ -32,6 +33,7 @@ body {
   cursor: pointer;
  
 }
+
 .chat-window .chat-header p {
   display: block;
   padding: 0 1em 0 2em;
@@ -45,7 +47,6 @@ body {
   height: calc(500px - (45px + 70px));
   border: 1px solid #263238;
   background: #fff;
-
   position: relative;
 }
 
@@ -147,7 +148,6 @@ body {
   padding: 0 0.7em;
   font-size: 1em;
   border-right: 1px dotted #607d8b;
-
   outline: none;
   font-family: "Open Sans", sans-serif;
 }

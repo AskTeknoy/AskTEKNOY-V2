@@ -80,14 +80,18 @@ io.on("connection", socket => {
     // contact user
     socket.on("save-contact-user", (userContactData) => {
         if(SaveData(userContactData)){
-            console.log("contact message save");
+
         }
     });
 
     // feedback user 
     socket.on("user-feedback", (userFeedbackMessage) => {
         if(SaveDataFeedback(userFeedbackMessage)){
-            console.log("feedback message save"); 
+            console.log("data saved feedback");
+            socket.emit("firebase-feedback", {isSuccess: true}); 
+        }
+        else {
+            socket.emit("firebase-feedback", {isSuccess: false}); 
         }
     })
 
@@ -217,22 +221,7 @@ io.on("connection", socket => {
             
                 // image files (location and building)
                 try {
-                    // const imageFileName = intent.replace(".", " "); 
-                    // // buffer to base64 to blob
-                    // const imageBuffer = await fs.readFile(imageUrl, { enconding: 'base64'});  
-                    // const imageBase64 = Buffer.from(imageBuffer).toString('base64'); 
-                    
-                    // // base64 to byte to blob
-                    // const { b64toBlob } = require("./b64toblob"); 
-                    
-                    // const imageBlob = b64toBlob(imageBase64, 'image/jpg'); 
-                    
-                    // if(imageBlob){ 
-                        
-                    //     console.log("blob created"); 
-                    // }
-
-                    // image file name same name to db
+                   
                     const imageFileName = `${intent}.jpg`; 
                     console.log(imageFileName);
                     

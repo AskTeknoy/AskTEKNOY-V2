@@ -1,19 +1,24 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
-import '../styles/Main.css';
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import validator from 'email-validator'; 
+import { Alert } from 'antd'; 
+
+import '../styles/Main.css';
+import 'antd/dist/antd.css';
 
 const Main = ({socket}) => {
     const [emailAddress, setEmailAddress] = useState("");
     const [feedbackMessage, setFeedBackMessage] = useState(""); 
+    const [isSuccess, setIsSuccess] = useState(false); 
+    const [isError, setIsError] = useState(false); 
     
     const sendFeedbackMessage = () => {
         if(emailAddress !== "" && feedbackMessage !== ""){
             
             if(validator.validate(emailAddress)){
+
                 const feedbackUserMessage = {
                     emailAddress: emailAddress, 
                     feedbackMessage: feedbackMessage, 
@@ -29,6 +34,18 @@ const Main = ({socket}) => {
         setEmailAddress("");  
         setFeedBackMessage("");  
     }
+
+    useEffect(() => {
+        // state firebase fetch data (success or fail)
+        socket.on("firebase-feedback", (data) => {
+            if(data.isSuccess){
+                setIsSuccess(data.isSuccess);
+                return  
+            }
+            setIsError(data.isSuccess); 
+        });
+
+    }, [socket])
 
     return (
     <section>
@@ -138,6 +155,23 @@ const Main = ({socket}) => {
           <div className="form">
               <h2>Send Feedback Anytime</h2>
               <p>If you found any issues and suggestions on the chatbot, <br/> feel free to react out to the team.</p>
+              
+              {isSuccess &&
+                <Alert 
+                    type='success'
+                    message='Success'
+                    description="Your response have been saved"
+                    closable
+                />}
+              
+              {isError && 
+                <Alert 
+                    type='error'
+                    message='Error'
+                    description="Can't saved your query, please try again later."
+                    closable
+                />}
+
               <div className="form-section">
                 <div className="form-container">
                    <input type="text" 
