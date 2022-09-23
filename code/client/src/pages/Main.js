@@ -13,12 +13,12 @@ const Main = ({socket}) => {
     const [feedbackMessage, setFeedBackMessage] = useState(""); 
     const [isSuccess, setIsSuccess] = useState(false); 
     const [isError, setIsError] = useState(false); 
-    
+    const [isNotValidEmail, setIsNotValidEmail] = useState(false); 
+
     const sendFeedbackMessage = () => {
         if(emailAddress !== "" && feedbackMessage !== ""){
             
             if(validator.validate(emailAddress)){
-
                 const feedbackUserMessage = {
                     emailAddress: emailAddress, 
                     feedbackMessage: feedbackMessage, 
@@ -27,6 +27,7 @@ const Main = ({socket}) => {
                 socket.emit("user-feedback", feedbackUserMessage); 
             }   
             else {
+                setIsNotValidEmail(true); 
                 setEmailAddress("");  
             }
         }
@@ -162,6 +163,7 @@ const Main = ({socket}) => {
                     message='Success'
                     description="Your response have been saved"
                     closable
+                    showIcon
                 />}
               
               {isError && 
@@ -170,7 +172,18 @@ const Main = ({socket}) => {
                     message='Error'
                     description="Can't saved your query, please try again later."
                     closable
+                    showIcon
                 />}
+
+              {isNotValidEmail &&
+                 <Alert 
+                    type='warning'
+                    message='Warning'
+                    description="Your email is invalid, please try again."
+                    closable
+                    showIcon
+                />
+              }
 
               <div className="form-section">
                 <div className="form-container">
