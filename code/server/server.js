@@ -10,17 +10,17 @@ const email = require('node-email-extractor').default;
 const { findPhoneNumbersInText, findNumbers  } = require('libphonenumber-js');
 const { GetImageLocation, GetFile } = require('./firebase/getImage');
 const { SaveData, SaveDataFeedback } = require('./firebase/models/userContact');
+const { SendEmail } = require("./utils/SendEmail"); 
 
-// automatic train model
+
+// automatic train  model
 const trainModel = require('./train'); 
-const e = require('express');
 
 const app = express() 
 app.use(cors())
 
 // change file name 
 let fileName = " "; 
-
 
 // manager to open model
 const manager = new NlpManager({language: ["en"]}); 
@@ -83,6 +83,7 @@ io.on("connection", socket => {
         if(SaveData(userContactData)){
             console.log("data saved contact"); 
             socket.emit("firebase-contacts", {isSuccess: true})
+            
         }
         else {
             socket.emit("firebase-contacts", {isSuccess: false})
@@ -93,7 +94,9 @@ io.on("connection", socket => {
     socket.on("user-feedback", (userFeedbackMessage) => {
         if(SaveDataFeedback(userFeedbackMessage)){
             console.log("data saved feedback");
-            socket.emit("firebase-feedback", {isSuccess: true}); 
+            socket.emit("firebase-feedback", {isSuccess: true});
+            
+            SendEmail(userFeedbackMessage); 
         }
         else {
             socket.emit("firebase-feedback", {isSuccess: false}); 
@@ -221,18 +224,20 @@ io.on("connection", socket => {
             // location (image) intent
             else if(intent.includes("location") || intent.includes("building")) { 
                 
-                // const imageUrl = __dirname + `/image_location/${intent}.jpg`; 
+                const imageUrl = __dirname + `/image_location/${intent}.jpg`; 
+                
 
             
                 // image files (location and building)
+                
                 try {
                    
                     const imageFileName = `${intent}.jpg`; 
                     console.log(imageFileName);
                     
 
-                    const imageURL = GetImageLocation(imageFileName); 
-                    console.log(`image url: ${imageURL}`);
+                    // const imageURL = GetImageLocation(imageFileName); 
+                    // console.log(`image url: ${imageURL}`);
 
                     // current intent
 
@@ -293,7 +298,6 @@ io.on("connection", socket => {
 })
 
 const PORT = process.env.PORT || 4001; 
-
 
 server.listen(PORT, () => { 
     console.log(`Server on port: ${PORT}`);

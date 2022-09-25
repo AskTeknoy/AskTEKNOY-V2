@@ -107,7 +107,7 @@ function Chat({socket}) {
                                     <a href="#">{messageContent.email}</a>
 
                                     {/* image content message */}
-                                    <img style={{width: 500, height: "auto"}} src={messageContent.imageURL} alt={messageContent.imageName}/>
+                                    <img style={{width: 400, height: "auto" }} src={messageContent.imageURL} alt={messageContent.imageName}/>
                                     
                                 </div>
 
