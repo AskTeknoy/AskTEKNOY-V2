@@ -2,6 +2,8 @@ import io from 'socket.io-client';
 import Main from './pages/Main';
 import Chat from './pages/Chat';
 import Navbar from './pages/Navbar';
+import Footer from './pages/Footer';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Contacts from './pages/Contacts';
 
@@ -18,6 +20,7 @@ function App() {
           <Route path='/chatbot' element={<Chat socket={socket} onClick={() => window.location.reload()}/>}  refresh="true"/>
           <Route path='/contacts' element={<Contacts socket={socket}/>}/>
         </Routes>
+          <Footer />
       </BrowserRouter>
     </div>
   );

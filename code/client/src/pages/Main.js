@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
 import validator from 'email-validator'; 
 import { Alert } from 'antd'; 
@@ -15,6 +15,8 @@ const Main = ({socket}) => {
     const [isError, setIsError] = useState(false); 
     const [isNotValidEmail, setIsNotValidEmail] = useState(false); 
 
+    const FeaturesRef = useRef(null); 
+
     const sendFeedbackMessage = () => {
         if(emailAddress !== "" && feedbackMessage !== ""){
             
@@ -23,13 +25,12 @@ const Main = ({socket}) => {
                     emailAddress: emailAddress, 
                     feedbackMessage: feedbackMessage, 
                 }
-
+                setIsNotValidEmail(false);
                 socket.emit("user-feedback", feedbackUserMessage); 
             }   
-            else {
-                setIsNotValidEmail(true); 
-                setEmailAddress("");  
-            }
+           
+            setIsNotValidEmail(true); 
+            setEmailAddress("");  
         }
         
         setEmailAddress("");  
@@ -39,17 +40,20 @@ const Main = ({socket}) => {
     useEffect(() => {
         // state firebase fetch data (success or fail)
         socket.on("firebase-feedback", (data) => {
+            setIsSuccess(false);
+
             if(data.isSuccess){
                 setIsSuccess(data.isSuccess);
                 return  
             }
-            setIsError(data.isSuccess); 
+            setIsError(!data.isSuccess); 
         });
 
-    }, [socket])
+    }, [socket, setIsSuccess, setIsError])
 
     return (
     <section>
+        
         <div className='intro'>
          
             <div className="description">
@@ -72,7 +76,7 @@ const Main = ({socket}) => {
             </div>
         </div>
 
-        <div className="features-view">
+        <div className="features-view" ref={FeaturesRef}>
           <div className="title-features">
               <h2 className="feat-title">Chatbot Features</h2>
           </div>
@@ -214,13 +218,6 @@ const Main = ({socket}) => {
     <div className="chat-section">
           <h2 className='start-chat-title'>Got your questions ready?</h2>
           <Link to="/chatbot">Start Chat</Link>
-      </div>
-      <div className="footer-main">
-          <p>Copyright 2022. All rights Reserved</p>
-          <a href="https://facebook.com">icon fb</a>
-          <a href="https://instagram.com">icon insta</a>
-          <a href="https://github.com">icon github</a>
-          <a href="https://twitter.com">icon twitter</a>
       </div>
   </section>
   )

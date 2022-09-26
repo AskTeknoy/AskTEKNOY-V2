@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
-section .intro {
-    margin-bottom: 0;
-    padding-bottom: 0; 
+section {
+    padding: 40px;
 }
+
+section .intro{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
 .description { 
-    margin-top: 50px;
+    margin-top: 30px;
     flex-wrap: wrap;
     position: relative;
     display: flex; 
@@ -30,6 +36,7 @@ section .intro {
     color:rgb(138, 135, 135);
     word-wrap: break-word;
     margin-bottom: 30px;
+    line-height: 30px;
 }
 
 .description img {
@@ -46,7 +53,6 @@ section .intro {
     color: #fff;
     border: none;
     font-size: 15px;
-    margin-top: 7px;
     font-weight: 700;
     line-height: 1.5;
     transition: 0.5s;
@@ -83,15 +89,15 @@ section .intro {
 .features:hover {
     color: #971921;
     cursor: pointer;
-    box-shadow: 2px 7px;
+    box-shadow: 7px 0 0 0 inset;
 }
 
 .features-container {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    grid-auto-rows: minmax(200px, auto);
+    gap: 10px;
+    grid-auto-rows: minmax(186px, auto);
     justify-content: center;
 }
 
@@ -111,7 +117,7 @@ section .intro {
     position: relative;
     max-width: 60px;
     height: 60px;
-    margin: 16px 20px 0; 
+    margin: 2px 20px 0; 
 }
 
 .how-to-use {
@@ -130,6 +136,8 @@ section .intro {
     max-width: 700px;
     word-wrap: break-word;
     color:rgb(138, 135, 135);
+    line-height: 35px;
+    font-size: 15px;
 }
 
 .circle { 
@@ -159,6 +167,7 @@ section .intro {
 
 .feedback {
     position: relative;
+    margin-right: 10px;
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -185,7 +194,10 @@ section .intro {
 }
 
 .form {
-    margin-right: 100px;
+    margin-right: 60px;
+    margin-bottom: 0;
+    margin-top: 60px;
+
 }
 
 .form-section {
@@ -222,7 +234,7 @@ section .intro {
 
 .feedback img {
     max-width: 650px;
-    padding: 130px 0 0 50px;
+    padding: 165px 0 0 50px;
     margin-bottom: -22px;
 }
 

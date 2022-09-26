@@ -1,5 +1,5 @@
 body {
-    margin: 0 40px; 
+    margin: 0 auto; 
     padding: 40px; 
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -63,6 +63,7 @@ textarea {
 
 .contact-container .send-btn {
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .contact-container .send-btn button {
@@ -79,6 +80,7 @@ textarea {
 .contact-container .send-btn button:hover{
     background-color: #FBD43E; 
     color: #971921;
+    font-weight: 800;
 }
 
 .contact-container .contact .alerts {

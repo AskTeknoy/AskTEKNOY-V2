@@ -8,14 +8,14 @@ const moment = require('moment');
 const extractUrl = require('extract-urls'); 
 const email = require('node-email-extractor').default;
 const { findPhoneNumbersInText, findNumbers  } = require('libphonenumber-js');
+const path = require('path'); 
+
 const { GetImageLocation, GetFile } = require('./firebase/getImage');
 const { SaveData, SaveDataFeedback } = require('./firebase/models/userContact');
 const { SendEmail } = require("./utils/SendEmail"); 
+const trainModel = require('./train'); // automatic train  model
 
-
-// automatic train  model
-const trainModel = require('./train'); 
-
+// middlewares 
 const app = express() 
 app.use(cors())
 
@@ -96,7 +96,7 @@ io.on("connection", socket => {
             console.log("data saved feedback");
             socket.emit("firebase-feedback", {isSuccess: true});
             
-            SendEmail(userFeedbackMessage); 
+            // SendEmail(userFeedbackMessage); 
         }
         else {
             socket.emit("firebase-feedback", {isSuccess: false}); 
@@ -125,6 +125,7 @@ io.on("connection", socket => {
         const intent = response.intent; // user intent
         
         if(response.answer){
+
             // link website intents
             if(intent.includes("website") || intent.includes("fb.page") || intent.includes("link")){
                 typeData = "link"; 
@@ -143,6 +144,8 @@ io.on("connection", socket => {
                         time: time, 
                         typeData: typeData, 
                         link: linkUrl, 
+                        imageName: '',
+                        imageURL: ''
                     }
                     
                     // send bot response to client 
@@ -152,16 +155,18 @@ io.on("connection", socket => {
                     console.log(err); 
                 }
             }
+
             // email intent
             else if(intent.includes("email") || intent.includes("emails")){
-                typeData = "emails"; 
+                typeData = "email"; 
                 
                 try { 
                     // extract email data 
                     const botAnswerEmail = response.answer; 
                     const emailUrlData = email.text(botAnswerEmail);
                     const emailUrl = emailUrlData.emails[0]; 
-
+                    
+                    console.log(emailUrl);
                     // separate email and non email
                     const messageEmail = botAnswerEmail.replace(emailUrl, ""); 
 
@@ -170,7 +175,9 @@ io.on("connection", socket => {
                         time: time, 
                         typeData: typeData, 
                         email: emailUrl, 
-                        message: messageEmail
+                        message: messageEmail,
+                        imageName: '',
+                        imageURL: ''
                     }
 
                     // send email type to client 
@@ -180,6 +187,7 @@ io.on("connection", socket => {
                     console.log(err);
                 }
             }
+
             // send pdf syllabus
             else if(intent.includes("syllabus")){
                 typeData = "file"; 
@@ -192,7 +200,9 @@ io.on("connection", socket => {
                         time: time, 
                         typeData: typeData, 
                         message: response.answer, 
-                        fileName: fileName
+                        fileName: fileName,
+                        imageName: '',
+                        imageURL: ''
                     }   
 
                     await socket.emit("receive-message", botMessageContent);
@@ -214,7 +224,9 @@ io.on("connection", socket => {
                         author: "AskTeknoy", 
                         message: response.answer, 
                         time: time, 
-                        typeData: typeData
+                        typeData: typeData,
+                        imageName: '',
+                        imageURL: ''
                 }
 
                 await socket.emit("receive-message", botMessageContent);
@@ -222,25 +234,21 @@ io.on("connection", socket => {
             }
 
             // location (image) intent
-            else if(intent.includes("location") || intent.includes("building")) { 
-                
-                const imageUrl = __dirname + `/image_location/${intent}.jpg`; 
-                
-
-            
+            else if(intent.includes("location")) { 
+   
                 // image files (location and building)
                 
                 try {
-                   
-                    const imageFileName = `${intent}.jpg`; 
+                    const imageFileName = `${intent}`; 
                     console.log(imageFileName);
                     
-
+                    
                     // const imageURL = GetImageLocation(imageFileName); 
                     // console.log(`image url: ${imageURL}`);
 
                     // current intent
-
+                    const imageUrl =`./image_location/${intent}.jpg`; 
+                   
                     typeData = "image"; 
                     console.log(typeData);
 
@@ -250,8 +258,7 @@ io.on("connection", socket => {
                         time: time, 
                         typeData: typeData,  
                         imageName: imageFileName,
-                        imageURL: imageURL,
-                        // imageUrl: imageUrl  
+                        imageURL: imageUrl, 
                     }
 
                     // send bot response to client 
@@ -270,7 +277,9 @@ io.on("connection", socket => {
                         author: "AskTeknoy", 
                         message: response.answer, 
                         time: time, 
-                        typeData: typeData
+                        typeData: typeData,
+                        imageName: '',
+                        imageURL: ''
                     }
 
                     // send bot response to client 
@@ -288,6 +297,8 @@ io.on("connection", socket => {
                             message: defaultAnswer, 
                             time: time, 
                             typeData: typeData, 
+                            imageName: '',
+                            imageURL: ''
             });   
         }
     })

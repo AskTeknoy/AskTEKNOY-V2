@@ -1,17 +1,21 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, useEffect, useRef } from 'react'; 
-import ScrollToBottom from 'react-scroll-to-bottom';
 import { useSpeechSynthesis } from 'react-speech-kit'; 
-import '../styles/Chat.css'; 
+import ScrollToBottom from 'react-scroll-to-bottom';
+import { Alert } from 'react-st-modal';
 import Axios from 'axios';
 import FileDownload from 'js-file-download';
 import moment from 'moment';
+import copy from 'copy-to-clipboard';
+import '../styles/Chat.css'; 
+
 
 function Chat({socket}) {
   const [userQuery, setQuery] = useState(""); 
   const [messageList, setMessageList] = useState([]); 
   const [fileName, setFileName] = useState(""); 
-
+  const [isImage, setIsImage] = useState(false); 
   const defaultAuthor = "Guest";
 
   const bottomRef = useRef(null); 
@@ -19,6 +23,7 @@ function Chat({socket}) {
   const { speak, speaking, cancel } =  useSpeechSynthesis(); 
 
   let messageData = { }; 
+
   const sendQuery = async () => {
     if(userQuery !== ""){
     
@@ -36,6 +41,7 @@ function Chat({socket}) {
 
     setQuery(" "); 
   }
+
   // render download data file
   const handleClickFile = (e) => { 
     e.preventDefault();
@@ -52,12 +58,23 @@ function Chat({socket}) {
     })
     .catch(err => alert("File does not exist"));
   }
-  
+
+  const copyEmailLink = async (emailLink) => {
+    copy(emailLink);
+
+    const result = await Alert("Email link copied to clipboard."); 
+  }
+
+
   useEffect(() => { 
     // receive message from bot
     socket.off("receive-message").on('receive-message', (botMessageRes) => { 
         setMessageList((list) => [...list, botMessageRes])
         
+        if(botMessageRes.typeData === 'image'){
+            setIsImage(true);
+        }
+
         // text to speech
         if(speaking){
             cancel();
@@ -73,11 +90,6 @@ function Chat({socket}) {
 
   }, [cancel, socket, speak, speaking]);
 
-  useEffect(() => {
-    // 👇️ scroll to bottom every time messages change
-    bottomRef.current?.scrollIntoView({behavior: 'smooth'});
-  }, [messageList]);
-
   return (
     <div className="App">
         <p className="section-title">Start Chat AskTeknoy</p>
@@ -87,28 +99,36 @@ function Chat({socket}) {
             </div>
             <div className="chat-body">
                 <ScrollToBottom className="message-container" mode="bottom">
-                    {messageList.map((messageContent) => {
+                    {messageList.map((messageContent, index) => {
                         return (
-                            <div className="message" id={() => messageContent.author === "AskTeknoy" ? "AskTeknoy" : "Guest"}>
-                                <div className="message-meta">
-                                    <p id="author">{messageContent.author}</p>
-                                    <p id="time">{messageContent.time}</p>
+                            
+                            <div key={index} className="message" id={() => messageContent.author === "AskTeknoy" ? "AskTeknoy" : "Guest"}>
+                                <div key={index} className="message-meta">
+                                    <p key={index} id="author">{messageContent.author}</p>
+                                    <p key={index} id="time">{messageContent.time}</p>
                                 </div>
 
-                                <div className="message-content">
-                                    <p>{messageContent.message}</p>
+                                <div className="message-content">     
+                                    <p >{messageContent.message}</p>
                                     {/* link content */}
-                                    <a href={messageContent.link}>{messageContent.link}</a>
+                                    <a  href={messageContent.link}>{messageContent.link}</a>
 
                                     {/* send file pdf content */}
-                                    <a href="#" onClick={(e) => { handleClickFile(e)}}>{messageContent.fileName}</a>
+                                    <a  href="#" 
+                                        onClick={(e) => { handleClickFile(e)}}>{messageContent.fileName}
+                                    </a>
 
                                     {/* email content */}
-                                    <a href="#">{messageContent.email}</a>
+                                    <a onClick={() => { copyEmailLink(messageContent.email)}}>{messageContent.email}</a>
 
                                     {/* image content message */}
-                                    <img style={{width: 400, height: "auto" }} src={messageContent.imageURL} alt={messageContent.imageName}/>
-                                    
+                       
+                                        <img 
+                                            id="imageLoc" 
+                                            style={{width: 150, height: "auto" }} 
+                                            src={`../../public/image_location/${messageContent.imageName}.jpg`}
+                                            alt={messageContent.imageName}
+                                        />
                                 </div>
 
                             </div>
