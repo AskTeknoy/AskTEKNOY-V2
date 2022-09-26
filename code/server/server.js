@@ -67,11 +67,13 @@ io.on("connection", socket => {
 
         // random message of the greetings bot
         const randomDefaultGreetingsHi = defaultGreetingsHi[Math.floor(Math.random() * 4)]; 
+        
         botMessageContent = {
             author: "AskTeknoy", 
             message: randomDefaultGreetingsHi,
             time: time, 
             typeData: typeData, 
+            imageURL: null   
         }
 
         // send initial message to client
@@ -144,8 +146,9 @@ io.on("connection", socket => {
                         time: time, 
                         typeData: typeData, 
                         link: linkUrl, 
-                        imageName: '',
-                        imageURL: ''
+                        imageURL: null   
+
+
                     }
                     
                     // send bot response to client 
@@ -176,8 +179,8 @@ io.on("connection", socket => {
                         typeData: typeData, 
                         email: emailUrl, 
                         message: messageEmail,
-                        imageName: '',
-                        imageURL: ''
+                        imageURL: null            
+
                     }
 
                     // send email type to client 
@@ -201,8 +204,9 @@ io.on("connection", socket => {
                         typeData: typeData, 
                         message: response.answer, 
                         fileName: fileName,
-                        imageName: '',
-                        imageURL: ''
+                        imageURL: null            
+
+
                     }   
 
                     await socket.emit("receive-message", botMessageContent);
@@ -217,16 +221,15 @@ io.on("connection", socket => {
                 typeData = "contact"; 
                 const phoneNumber = findNumbers(response.answer, 'US'); 
                 // const newMessageContact = (response.answer).replace(phoneNumber, ""); 
-
+                
                 console.log(phoneNumber); 
 
                 botMessageContent = {
-                        author: "AskTeknoy", 
-                        message: response.answer, 
-                        time: time, 
-                        typeData: typeData,
-                        imageName: '',
-                        imageURL: ''
+                    author: "AskTeknoy", 
+                    message: response.answer, 
+                    time: time, 
+                    typeData: typeData,
+                    imageURL: null            
                 }
 
                 await socket.emit("receive-message", botMessageContent);
@@ -247,10 +250,12 @@ io.on("connection", socket => {
                     // console.log(`image url: ${imageURL}`);
 
                     // current intent
-                    const imageUrl =`./image_location/${intent}.jpg`; 
-                   
+                    const imageURL =`../image_location/${intent}.jpg`; 
+
                     typeData = "image"; 
                     console.log(typeData);
+                    
+                    console.log(imageURL);
 
                     botMessageContent = {
                         author: "AskTeknoy", 
@@ -258,7 +263,7 @@ io.on("connection", socket => {
                         time: time, 
                         typeData: typeData,  
                         imageName: imageFileName,
-                        imageURL: imageUrl, 
+                        imageURL: imageURL, 
                     }
 
                     // send bot response to client 
@@ -278,8 +283,8 @@ io.on("connection", socket => {
                         message: response.answer, 
                         time: time, 
                         typeData: typeData,
-                        imageName: '',
-                        imageURL: ''
+                        imageURL: null   
+
                     }
 
                     // send bot response to client 
@@ -292,13 +297,14 @@ io.on("connection", socket => {
         } 
 
         else {
-
+            
+            // default text
             await socket.emit("receive-message", { author: "AskTeknoy", 
                             message: defaultAnswer, 
                             time: time, 
                             typeData: typeData, 
-                            imageName: '',
-                            imageURL: ''
+                            imageURL: null   
+
             });   
         }
     })

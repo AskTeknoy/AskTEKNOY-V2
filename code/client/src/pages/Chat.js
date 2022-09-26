@@ -8,6 +8,8 @@ import Axios from 'axios';
 import FileDownload from 'js-file-download';
 import moment from 'moment';
 import copy from 'copy-to-clipboard';
+
+import Image from './Image';
 import '../styles/Chat.css'; 
 
 
@@ -121,14 +123,7 @@ function Chat({socket}) {
                                     {/* email content */}
                                     <a onClick={() => { copyEmailLink(messageContent.email)}}>{messageContent.email}</a>
 
-                                    {/* image content message */}
-                       
-                                        <img 
-                                            id="imageLoc" 
-                                            style={{width: 150, height: "auto" }} 
-                                            src={`../../public/image_location/${messageContent.imageName}.jpg`}
-                                            alt={messageContent.imageName}
-                                        />
+                                    <Image imgPath={messageContent.imageURL}/>
                                 </div>
 
                             </div>
