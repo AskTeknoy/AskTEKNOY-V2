@@ -41,6 +41,8 @@ const Main = ({socket}) => {
     }
 
     useEffect(() => {
+        document.title = "AskTeknoy";
+        
         // state firebase fetch data (success or fail)
         socket.on("firebase-feedback", (data) => {
             setIsSuccess(false);
@@ -168,7 +170,7 @@ const Main = ({socket}) => {
                 <Alert 
                     type='success'
                     message='Success'
-                    description="Your response have been saved"
+                    description="Your response have been saved. Thank you for your feedback."
                     closable
                     showIcon
                 />}

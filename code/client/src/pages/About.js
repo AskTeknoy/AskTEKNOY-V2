@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Profiles from './developers/Profiles';
 
 
@@ -64,8 +64,12 @@ const About = () => {
     }
   }
 
+  useEffect(() => {
+    document.title = "AskTeknoy | About Us";
+  }, [])
   return (
     <div>
+        
         <div className="about-title">
             <h2>About Us</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima tempora dolorum at consequatur!</p>

@@ -48,7 +48,7 @@ const Contacts = ({socket}) => {
 
   
   useEffect(() => {
-
+    document.title = "AskTeknoy | Contact";
     // contacts from server response (firebase fetch)
     socket.on("firebase-contacts", (dataContacts) => {
         if(dataContacts.isSuccess){

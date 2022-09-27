@@ -12,7 +12,6 @@ const Navbar = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contacts">Contact</Link></li>
-            <li><a href="#">Features</a></li>
             <li><a href="https://cit.edu/" className="home-cit">CIT-U Home</a></li>
             </ul>
         </nav>

@@ -69,6 +69,8 @@ function Chat({socket}) {
 
 
   useEffect(() => { 
+    document.title = "Start Ask AskTeknoy";
+
     // receive message from bot
     socket.off("receive-message").on('receive-message', (botMessageRes) => { 
         setMessageList((list) => [...list, botMessageRes])
