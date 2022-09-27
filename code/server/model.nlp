@@ -110361,7 +110361,7 @@
         ],
         "events.upcoming.december": [
           {
-            "answer": "Dec 6 - Founder's Day\nDec 21, 22, 23 - Final Exams (Cluster 2) Dec 23 - Classes End Dec 30 - Deadline: Submission of Final Grades"
+            "answer": "Dec 6 - Founder's Day Dec 21, 22, 23 - Final Exams (Cluster 2) Dec 23 - Classes End Dec 30 - Deadline: Submission of Final Grades"
           }
         ],
         "events.upcoming.febuarary": [
@@ -111786,6 +111786,9 @@
         "tuition.courses": [
           {
             "answer": "Hello! We can't provide you with the exact tuition. However, per unit for Engineering and other colleges is around P800."
+          },
+          {
+            "answer": "Hello! We can't provide you an exact tuition, but every unit for Engineering and other institutions is about P800."
           }
         ],
         "website.aims.cit": [

@@ -25,16 +25,19 @@ const Main = ({socket}) => {
                     emailAddress: emailAddress, 
                     feedbackMessage: feedbackMessage, 
                 }
-                setIsNotValidEmail(false);
-                socket.emit("user-feedback", feedbackUserMessage); 
+                socket.emit("user-feedback", feedbackUserMessage);
+
+                setEmailAddress("");  
+                setFeedBackMessage("");  
+                return 
             }   
            
             setIsNotValidEmail(true); 
             setEmailAddress("");  
         }
-        
         setEmailAddress("");  
         setFeedBackMessage("");  
+        
     }
 
     useEffect(() => {
