@@ -242,7 +242,8 @@ io.on("connection", socket => {
                 // image files (location and building)
                 
                 try {
-                    const imageFileName = `${intent}`; 
+                    const imageName = `${intent}`; 
+                    const imageFileName = imageName.replaceAll('.', '_');
                     console.log(imageFileName);
                     
                     

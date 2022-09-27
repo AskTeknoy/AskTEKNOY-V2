@@ -115,15 +115,16 @@ function Chat({socket}) {
                                     {/* link content */}
                                     <a  href={messageContent.link}>{messageContent.link}</a>
 
-                                    {/* send file pdf content */}
+                                    {/* Send file pdf content */}
                                     <a  href="#" 
                                         onClick={(e) => { handleClickFile(e)}}>{messageContent.fileName}
                                     </a>
 
-                                    {/* email content */}
+                                    {/* Email content */}
                                     <a onClick={() => { copyEmailLink(messageContent.email)}}>{messageContent.email}</a>
-
-                                    <Image imgPath={messageContent.imageURL}/>
+                                    
+                                    {/* Image Content */}
+                                    {messageContent.typeData === 'image' ? <Image imgKey={messageContent.imageName}/> : ''}
                                 </div>
 
                             </div>
