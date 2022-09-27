@@ -41,6 +41,7 @@ nav a:hover {
 }
 
 
+
 nav ul {
     position: relative;
     display: flex; 
@@ -57,12 +58,18 @@ nav ul li a {
     font-size: 15px;
 }
 
+nav ul li a:focus{ 
+    font-weight: 800;
+    color: #971921;
+}
+
 nav ul li a:hover{ 
     font-weight: 800;
     color: #971921;
     font-size: 15px;
     transition: 0.4s;
 }
+
 
 nav ul li .home-cit{
     position: relative;
