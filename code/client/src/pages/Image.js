@@ -12,7 +12,7 @@ const Image = ({imgKey}) => {
         {/* image content message */}                
         <img 
             class="imageLoc" 
-            style={{width: 170, height: "auto", margin: '0 auto'}} 
+            style={{width: 180, height: "auto", borderRadius: 10, marginBottom: 5}} 
             // src={`../../public/image_location/${messageContent.imageName}.jpg`}
             src={LibraryImages[imgKey] || 'data:image/gif;base64,R0lGODlhAQABAAAQABAAA='}
             onError= {e => e.target.style.display = 'none'}
