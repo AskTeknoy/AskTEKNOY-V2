@@ -9,7 +9,7 @@ import FileDownload from 'js-file-download';
 import moment from 'moment';
 import copy from 'copy-to-clipboard';
 
-import Image from './Image';
+import Message from './MessageBody';
 import '../styles/Chat.css'; 
 
 
@@ -17,7 +17,8 @@ function Chat({socket}) {
   const [userQuery, setQuery] = useState(""); 
   const [messageList, setMessageList] = useState([]); 
   const [fileName, setFileName] = useState(""); 
-  const [isImage, setIsImage] = useState(false); 
+
+
   const defaultAuthor = "Guest";
 
   const bottomRef = useRef(null); 
@@ -74,10 +75,6 @@ function Chat({socket}) {
     // receive message from bot
     socket.off("receive-message").on('receive-message', (botMessageRes) => { 
         setMessageList((list) => [...list, botMessageRes])
-        
-        if(botMessageRes.typeData === 'image'){
-            setIsImage(true);
-        }
 
         // text to speech
         if(speaking){
@@ -101,38 +98,33 @@ function Chat({socket}) {
             <div className="chat-header">
                 <p>AskTeknoy</p>
             </div>
+           
             <div className="chat-body">
-                <ScrollToBottom className="message-container" mode="bottom">
-                    {messageList.map((messageContent, index) => {
-                        return (
-                            
-                            <div key={index} className="message" id={() => messageContent.author === "AskTeknoy" ? "AskTeknoy" : "Guest"}>
-                                <div key={index} className="message-meta">
-                                    <p key={index} id="author">{messageContent.author}</p>
-                                    <p key={index} id="time">{messageContent.time}</p>
-                                </div>
-
-                                <div className="message-content">     
-                                    <p >{messageContent.message}</p>
-                                    {/* link content */}
-                                    <a  href={messageContent.link}>{messageContent.link}</a>
-
-                                    {/* Send file pdf content */}
-                                    <a  href="#" 
-                                        onClick={(e) => { handleClickFile(e)}}>{messageContent.fileName}
-                                    </a>
-
-                                    {/* Email content */}
-                                    <a onClick={() => { copyEmailLink(messageContent.email)}}>{messageContent.email}</a>
-                                    
-                                    {/* Image Content */}
-                                    {messageContent.typeData === 'image' ? <Image imgKey={messageContent.imageName}/> : ''}
-                                </div>
-
-                            </div>
-                        )
-                    })}
-                </ScrollToBottom>
+            <ScrollToBottom className="message-container" mode="bottom">
+                {messageList.map((messageContent, index) => {
+                    return (
+                        <> 
+                            {messageContent.author === "AskTeknoy" ? 
+                                <Message 
+                                messageContent={messageContent} 
+                                index={index}
+                                handleClickFile={handleClickFile} 
+                                copyEmailLink={copyEmailLink}   
+                                author="AskTeknoy"
+                            /> 
+                            :
+                            <Message 
+                                messageContent={messageContent} 
+                                index={index}
+                                handleClickFile={handleClickFile} 
+                                copyEmailLink={copyEmailLink}   
+                                author="Guest"
+                            />
+                            }
+                        </>
+                    )
+                })}
+            </ScrollToBottom>
                 <div ref={bottomRef} />
             </div>
             

@@ -300,7 +300,8 @@ io.on("connection", socket => {
         else {
             
             // default text
-            await socket.emit("receive-message", { author: "AskTeknoy", 
+            await socket.emit("receive-message", { 
+                            author: "AskTeknoy", 
                             message: defaultAnswer, 
                             time: time, 
                             typeData: typeData, 

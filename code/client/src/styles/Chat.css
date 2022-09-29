@@ -64,13 +64,15 @@ body {
 .chat-window .chat-body .message {
   height: auto;
   padding: 10px;
-  display: block;
+  display: flex;
+  flex-direction: row ;
 }
 
 
 .chat-window .chat-body .message .message-content {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   width: auto;
   height: auto;
   min-height: 40px;
@@ -78,15 +80,20 @@ body {
   background-color: #971921;
   border-radius: 7px;
   color: white;
-  display: flex;
   align-items: center;
-  margin-right: 7px;
-  margin-left: 7px;
-  margin-top: 7px;
-  padding-right: 7px;
-  padding-left: 7px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
   overflow-wrap: break-word;
   word-break: break-word;
+}
+
+.chat-body .message-container .message .message-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #AskTeknoy {
@@ -95,6 +102,7 @@ body {
 
 #AskTeknoy .message-content {
   justify-content: flex-start;
+  background-color: #c00916;
 }
 
 #AskTeknoy .message-meta {
@@ -104,6 +112,7 @@ body {
 
 #Guest {
   justify-content: flex-end;
+  
 }
 
 #Guest .message-content {
