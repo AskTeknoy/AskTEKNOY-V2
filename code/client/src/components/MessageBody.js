@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import Image from './Image';
+import MapGoogle from './MapGoogle';
 
 const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}) => {
   return (
@@ -28,6 +29,10 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
                     
                     {/* Image Content */}
                     {messageContent.typeData === 'image' ? <Image imgKey={messageContent.imageName}/> : ''}
+
+                    {/* Map content intents */}
+
+                    {messageContent.typeData === "map" ? <MapGoogle /> : <div>not found</div>}
                 </div>
             </div>
             

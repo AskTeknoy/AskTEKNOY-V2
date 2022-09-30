@@ -190,7 +190,28 @@ io.on("connection", socket => {
                     console.log(err);
                 }
             }
+            
+            // location map
+            else if(intent.includes("address")){
+                typeData = "map"; 
 
+                try { 
+
+                    botMessageContent = { 
+                        typeData: typeData, 
+                        author: "AskTeknoy", 
+                        time: time, 
+                        message: response.answer, 
+                        
+                    }
+
+                    await socket.emit("receive-message", botMessageContent);
+
+                }
+                catch (e){ 
+                    console.log("Error"); 
+                }
+            }
             // send pdf syllabus
             else if(intent.includes("syllabus")){
                 typeData = "file"; 
@@ -205,8 +226,6 @@ io.on("connection", socket => {
                         message: response.answer, 
                         fileName: fileName,
                         imageURL: null            
-
-
                     }   
 
                     await socket.emit("receive-message", botMessageContent);

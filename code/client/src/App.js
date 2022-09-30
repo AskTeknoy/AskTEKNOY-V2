@@ -5,7 +5,7 @@ import Navbar from './pages/Navbar';
 import Footer from './pages/Footer';
 import About from './pages/About';
 import Contacts from './pages/Contacts';
-import MapGoogle from './pages/MapGoogle';
+import MapGoogle from './components/MapGoogle';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
