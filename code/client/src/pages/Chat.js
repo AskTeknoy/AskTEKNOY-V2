@@ -9,7 +9,7 @@ import FileDownload from 'js-file-download';
 import moment from 'moment';
 import copy from 'copy-to-clipboard';
 
-import Message from './MessageBody';
+import Message from '../components/MessageBody';
 import '../styles/Chat.css'; 
 
 

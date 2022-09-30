@@ -8,9 +8,9 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
         <div key={index} className="message" id={author}>
 
             <div className='message-box' id={author + "-box"}>
-                <div key={index} className="message-meta">
-                    <p key={index} id="author">{messageContent.author}</p>
-                    <p key={index} id="time">{messageContent.time}</p>
+                <div className="message-meta">
+                    <p id="author">{messageContent.author}</p>
+                    <p id="time">{messageContent.time}</p>
                 </div>
 
                 <div className="message-content">     
