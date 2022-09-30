@@ -32,7 +32,7 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
 
                     {/* Map content intents */}
 
-                    {messageContent.typeData === "map" ? <MapGoogle /> : <div>not found</div>}
+                    {messageContent.typeData === "map" ? <MapGoogle /> : <></>}
                 </div>
             </div>
             
