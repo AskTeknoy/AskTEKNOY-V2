@@ -31,8 +31,7 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
                     {messageContent.typeData === 'image' ? <Image imgKey={messageContent.imageName}/> : ''}
 
                     {/* Map content intents */}
-
-                    {messageContent.typeData === "map" ? <MapGoogle /> : <></>}
+                    {messageContent.typeData === "map" ? <MapGoogle /> : null}
                 </div>
             </div>
             

@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
+
+import '../styles/Navbar.css';
+import '../styles/responsive/nav-rwd.css';
 
 const Navbar = () => {
   return (

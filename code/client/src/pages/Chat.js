@@ -12,12 +12,10 @@ import copy from 'copy-to-clipboard';
 import Message from '../components/MessageBody';
 import '../styles/Chat.css'; 
 
-
 function Chat({socket}) {
   const [userQuery, setQuery] = useState(""); 
   const [messageList, setMessageList] = useState([]); 
   const [fileName, setFileName] = useState(""); 
-
 
   const defaultAuthor = "Guest";
 
@@ -130,12 +128,12 @@ function Chat({socket}) {
             
             <div className="chat-footer">
                 <input 
-                type="text"
-                value={userQuery}
-                placeholder="Enter message..." 
-                onChange={(event) => setQuery(event.target.value)} 
-                onKeyPress={(event) => event.key === "Enter" && sendQuery()}
-                />
+                    type="text"
+                    value={userQuery}
+                    placeholder="Enter message..." 
+                    onChange={(event) => setQuery(event.target.value)} 
+                    onKeyPress={(event) => event.key === "Enter" && sendQuery()}
+                    />
                 <button onClick={sendQuery}>&#10148;</button>
             </div>
         </div>

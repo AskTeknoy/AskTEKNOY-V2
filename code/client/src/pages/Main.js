@@ -6,7 +6,8 @@ import validator from 'email-validator';
 import { Alert } from 'antd'; 
 
 import 'antd/dist/antd.css';
-import '../styles/Main.css';
+import '../styles/Main.css'; 
+import '../styles/responsive/main-rwd.css';
 
 const Main = ({socket}) => {
     const [emailAddress, setEmailAddress] = useState("");
@@ -74,7 +75,7 @@ const Main = ({socket}) => {
                     <Link to="/chatbot">Start Chatting Now &#10140;</Link>
                 </div>
 
-                <div>
+                <div className="circle-container">
                     <div className="circle"></div>
                     <img src={require("./images/logo/girl.png")} alt="woman"/>
                 </div>

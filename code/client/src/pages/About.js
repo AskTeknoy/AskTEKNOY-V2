@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Profiles from './developers/Profiles';
-
 
 
 // static photos 
@@ -11,6 +9,8 @@ import Rheaynne from "./images/team_profiles/rheaynne.jpg";
 import Stefan from './images/team_profiles/stefan.jpg';
 
 import '../styles/About.css';
+import '../styles/responsive/about-rwd.css';
+
 
 const About = () => {
   const [IsDisplayDars, setIsDisplayDars] = useState(false);
@@ -80,20 +80,21 @@ const About = () => {
             {developers.map((developer) =>{
                 return(            
                      <div className='container'>
+                        
                         <img className='profile-pic' src={developer.imgFile} alt={developer.name} />
+                        <h2 onClick={() => { displayAboutInfo(developer.nickName) }} className='title'>{developer.name}</h2>
+                        <p className='role'>{developer.role}</p>
 
                         <div className='overlay overlay-fade'>
                             <a href={developer.github}><img className='logo-social' src={require(`../pages/images/logo/github.png`)} alt="github" /></a>
                             <a href={developer.fb}><img className='logo-social' src={require(`../pages/images/logo/fb-logo.png`)} alt="fb" /></a>
                         </div>
 
-                        <h2 onClick={() => { displayAboutInfo(developer.nickName) }} className='title'>{developer.name}</h2>
-                        <p className='role'>{developer.role}</p>
+                       
                     
                         {/* {IsDisplayRay && <Profiles name={developer.name} role={developer.role} age={developer.age}  imgFile={developer.imgFile} imageName={developer.name}/>} */}
                     
                     </div>    
-
                 )      
             })}   
          </div>         

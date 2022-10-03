@@ -1,24 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import  LibraryImages  from './LibraryImages.js';
 
-import '../styles/Image.css'; 
+import ModalImage from './ModalImage.js';
 
+import '../styles/Image.css'
 const Image = ({imgKey}) => {
-  console.log(imgKey);
+  const [clickedImg, setClickedImg] = useState(null);
+
+  const handleClickedImg = (imgSrc) => {
+    setClickedImg(imgSrc); 
+    console.log("clicked")
+  }
 
   return (
     <div>
-        
         {/* image content message */}                
         <img 
-            class="imageLoc" 
-            style={{width: 180, height: "auto", borderRadius: 10, marginBottom: 5}} 
+            style={{width: 180, height: "auto", borderRadius: 10, marginBottom: 5, cursor: 'pointer'}} 
+            id="imageLoc" 
             // src={`../../public/image_location/${messageContent.imageName}.jpg`}
             src={LibraryImages[imgKey] || 'data:image/gif;base64,R0lGODlhAQABAAAQABAAA='}
             onError= {e => e.target.style.display = 'none'}
             // alt={messageContent.imageName}
-            alt='cas building'
+            alt='cit buildings'
+            onClick={() => handleClickedImg(LibraryImages[imgKey])}  
         />
+        {/* {clickedImg && 
+          <ModalImage 
+            clickedImg={LibraryImages[imgKey]} 
+            setClickedImg={setClickedImg}
+            
+          />} */}
     </div>
   )
 }

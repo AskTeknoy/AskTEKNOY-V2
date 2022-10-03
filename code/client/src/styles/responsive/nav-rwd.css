@@ -1,0 +1,43 @@
+@media only screen and (max-width: 1250px) {
+    nav ul li {
+        margin: 0 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    nav ul li {
+        margin: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 822px) {
+    nav ul li .home-cit {
+        padding: 10px 40px;
+    }
+
+    nav ul li :not(.home-cit){
+        display: none;
+        padding: 0;
+        margin: 0;
+        width: 0;
+        height: 0;
+        z-index: -1;
+    }
+    
+}
+
+@media only screen and (max-width: 694px) {
+    nav .logo {
+        font-size: 25px;
+    }
+    
+    .description .content .title-intro {
+        font-size: 35px;
+        max-width: 400px;
+    }
+
+    nav ul li .home-cit {
+        padding: 10px 30px;
+        font-size: 13px;
+    }
+}

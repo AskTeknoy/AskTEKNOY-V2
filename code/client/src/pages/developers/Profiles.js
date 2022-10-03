@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../../styles/Profiles.css';
 
 const Profiles = ({name, role, age, imgFile, imageName}) => {

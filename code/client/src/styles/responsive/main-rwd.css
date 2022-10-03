@@ -1,0 +1,149 @@
+/* ///// MEDIA QUERIES ////// */
+
+ @media only screen and (max-width: 1360px){
+    
+    /* ======== intro ========== */
+    .description img { 
+        max-width: 500px;
+    }
+
+    .circle { 
+        width: 75%;
+        height: 93%; 
+        top: 15; left: 25%; 
+    }
+
+    .description { 
+        margin-top: 10px;
+    }
+
+    .description .content {
+        max-width: 550px;
+    }
+
+    .description .content .title-intro {
+        width: 90%;
+        height: auto;
+        font-size: 50px;
+    }
+
+    .description .content p {
+        max-width: 400px;
+        color:rgb(138, 135, 135);
+        word-wrap: break-word;
+        margin-bottom: 20px;
+        line-height: 30px;
+    }
+ }
+
+ @media only screen and (max-width: 1250px){
+    
+    /* ====== intro ===== */
+    .circle { 
+        width: 50%;
+        left: 50%;
+    }
+
+    .description .content {
+        max-width: 450px;
+    }
+
+    .description img { 
+        max-width: 450px;
+    }
+
+    .description .content .title-intro { 
+        font-size: 40px;
+    }
+
+    .description .content p {
+        font-size: 13px;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    .circle { 
+        width: 40%;
+        left: 60%;
+        top: 3%;
+        right: 10%;
+        clip-path: circle(60% at right 55%);
+    }
+
+    .circle-container { 
+        width: 355px;
+    }
+    .description .content {
+        max-width: 400px;
+    }
+
+    .description img { 
+        max-width: 420px;
+        top: 23px;
+        left: 10px;
+    }
+
+    .description .content .title-intro { 
+        font-size: 37px;
+    }
+
+    .description .content p {
+        font-size: 12px;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 917px) {
+    section {
+        width: 100%;
+        padding: auto;
+        margin: auto;
+    }
+    
+    .description {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .content { 
+        margin-bottom: 20px;
+    }
+  
+
+    .description .content .title-intro {
+        margin: 0 auto 13px;
+    }
+
+    .circle { 
+        width: 100%;
+        left: 0;
+        top: 52%;
+        right: 10%;
+        clip-path: circle(40% at center 2%);
+    }
+
+    .features-view {
+        margin-top: 10%;
+    }
+
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 694px){
+    .features-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
