@@ -12,7 +12,6 @@ section .intro {
     min-height: 100vh;
 }
 
-
 nav { 
     position: relative;
     display: flex;

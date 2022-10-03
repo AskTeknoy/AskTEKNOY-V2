@@ -6,6 +6,7 @@ import validator from 'email-validator';
 
 import 'antd/dist/antd.css';
 import '../styles/Contacts.css';
+import '../styles/responsive/contact-rwd.css';
 
 
 const Contacts = ({socket}) => {

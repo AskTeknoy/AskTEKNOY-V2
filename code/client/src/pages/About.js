@@ -89,9 +89,7 @@ const About = () => {
                             <a href={developer.github}><img className='logo-social' src={require(`../pages/images/logo/github.png`)} alt="github" /></a>
                             <a href={developer.fb}><img className='logo-social' src={require(`../pages/images/logo/fb-logo.png`)} alt="fb" /></a>
                         </div>
-
-                       
-                    
+   
                         {/* {IsDisplayRay && <Profiles name={developer.name} role={developer.role} age={developer.age}  imgFile={developer.imgFile} imageName={developer.name}/>} */}
                     
                     </div>    

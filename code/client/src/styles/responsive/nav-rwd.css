@@ -17,27 +17,32 @@
 
     nav ul li :not(.home-cit){
         display: none;
-        padding: 0;
-        margin: 0;
-        width: 0;
-        height: 0;
-        z-index: -1;
     }
     
 }
 
 @media only screen and (max-width: 694px) {
+    nav {
+      padding: 0 20px 0;
+      margin: 0;
+    }
+
     nav .logo {
-        font-size: 25px;
+        font-size: 30px;
     }
     
     .description .content .title-intro {
         font-size: 35px;
         max-width: 400px;
     }
+    
+    nav ul {
+        margin-top: 10px;
+        display: block;
+    }
 
     nav ul li .home-cit {
         padding: 10px 30px;
-        font-size: 13px;
+        font-size: 15px;
     }
 }
