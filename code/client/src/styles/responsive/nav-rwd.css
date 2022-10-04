@@ -32,6 +32,10 @@
     }
 
     nav .logo {
+        font-size: 27px;
+    }
+
+    nav a:hover { 
         font-size: 30px;
     }
     
@@ -52,5 +56,11 @@
     nav ul li .home-cit {
         padding: 10px 30px;
         font-size: 13px;
+    }
+
+    nav ul li .home-cit:hover {
+        font-weight: 800;
+        padding: 10px 30px;
+        border: none;
     }
 }

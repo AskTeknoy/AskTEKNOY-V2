@@ -269,13 +269,15 @@
         top: -30px;
     }
 
+
+    /* features section */
     .features-view {
         margin-top: 20%;
     }
 
     .features-view .title-features .feat-title {
-        font-size: 35px;
-        margin-bottom: 40px;
+        font-size: 30px;
+        margin-bottom: 10%;
     }
 
     /* features view */
@@ -286,6 +288,11 @@
 
     }
 
+    .feedback .form .feedback-btn button {
+        padding: 12px 70px;
+        margin-top: 0;
+    }
+
     /* how to use section */
     .how-to-use { 
         text-align: center;
@@ -293,8 +300,17 @@
         margin-bottom: 50px;
         margin-top: 0;
     }
-    /* chat section */
 
+    .how-to-use .how-description h2{
+        font-size: 40px;
+    }
+
+    .how-to-use .how-description p {
+        max-width: 650px;
+        font-size: 13px;
+    }
+
+    /* chat section */
     .chat-section .start-chat-title {
         font-size: 40px;
         max-width: 300px;
