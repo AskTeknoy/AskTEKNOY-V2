@@ -5,7 +5,7 @@
         grid-auto-rows: minmax(30px, auto); 
 
     }
-    
+
     .about-title {
         margin: 50px 20% 40px;
     }
@@ -25,6 +25,7 @@
  @media only screen and (max-width: 917px){
     .about-container .profiles{
         grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
     }
 
     .about-title {
