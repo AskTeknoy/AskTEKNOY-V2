@@ -13,11 +13,11 @@ import Message from '../components/MessageBody';
 import '../styles/Chat.css'; 
 import '../styles/responsive/chat-rwd.css';
 
-
 function Chat({socket}) {
   const [userQuery, setQuery] = useState(""); 
   const [messageList, setMessageList] = useState([]); 
   const [fileName, setFileName] = useState(""); 
+  const [hasClicked, setHasClicked] = useState(false);
 
   const defaultAuthor = "Guest";
 
@@ -87,9 +87,20 @@ function Chat({socket}) {
         if(botMessageRes.typeData === "file"){ 
             setFileName(botMessageRes.fileName);
         }
+
+        if(hasClicked) {
+            document.title = "Start ask AskTeknoy";
+        }  
+        else {
+            if(botMessageRes){
+                setInterval(()=> {
+                    document.title = "AskTeknoy has a message...";
+                }, 3000)
+            }
+        }
     })
 
-  }, [cancel, socket, speak, speaking]);
+  }, [cancel, hasClicked, socket, speak, speaking]);
 
   return (
     <div className="App">
@@ -133,6 +144,7 @@ function Chat({socket}) {
                     type="text"
                     value={userQuery}
                     placeholder="Enter message..." 
+                    onClick={() => { setHasClicked(true)}}
                     onChange={(event) => setQuery(event.target.value)} 
                     onKeyPress={(event) => event.key === "Enter" && sendQuery()}
                     />
