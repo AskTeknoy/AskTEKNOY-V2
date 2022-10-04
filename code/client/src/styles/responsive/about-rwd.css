@@ -20,6 +20,11 @@
         font-size: 20px;
     }
 
+
+    .overlay{
+        max-height: 98%;
+    }
+
  }
 
  @media only screen and (max-width: 917px){
@@ -42,6 +47,10 @@
         font-size: 20px;
     }
 
+    .overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0);
+    }
  }
 
  @media only screen and (max-width: 694px){
@@ -68,7 +77,12 @@
     
     .about-container .profiles{
         grid-template-columns: repeat(1, 1fr);
-        gap: 70px;
+        gap: 90px;
+        margin-bottom: 20px;
+    }
 
+    .overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0);
     }
  }

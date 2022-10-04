@@ -10,7 +10,7 @@
     .circle { 
         width: 75%;
         height: 93%; 
-        top: 15; left: 25%; 
+        top: -17px; left: 25%; 
     }
 
     .description { 
@@ -94,11 +94,17 @@
 @media only screen and (max-width: 1075px) {
     /* intro section */
     .circle { 
-        width: 40%;
-        left: 60%;
+        width: 50%;
+        left: 50%;
         top: 3%;
         right: 10%;
-        clip-path: circle(60% at right 55%);
+        clip-path: circle(70% at right 55%);
+    }
+
+    .description img { 
+        max-width: 420px;
+        top: 33px;
+        left: 0;
     }
 
     .circle-container { 
@@ -109,11 +115,7 @@
         max-width: 400px;
     }
 
-    .description img { 
-        max-width: 420px;
-        top: 23px;
-        left: 10px;
-    }
+    
 
     .description .content .title-intro { 
         font-size: 37px;

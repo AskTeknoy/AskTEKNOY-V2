@@ -45,7 +45,7 @@ section .intro {
     max-width: 600px;
     height: auto;
     padding-right: 5em;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .description .content a {
@@ -239,7 +239,7 @@ section .intro {
 
 .feedback img {
     max-width: 650px;
-    padding: 165px 0 0 50px;
+    padding: 173px 0 0 50px;
     margin-bottom: -22px;
 }
 
