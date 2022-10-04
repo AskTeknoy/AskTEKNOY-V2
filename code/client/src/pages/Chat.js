@@ -11,6 +11,8 @@ import copy from 'copy-to-clipboard';
 
 import Message from '../components/MessageBody';
 import '../styles/Chat.css'; 
+import '../styles/responsive/chat-rwd.css';
+
 
 function Chat({socket}) {
   const [userQuery, setQuery] = useState(""); 
