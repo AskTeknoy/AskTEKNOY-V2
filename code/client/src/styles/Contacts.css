@@ -34,11 +34,20 @@ body {
     margin-bottom: 50px;
 }
 
+.fields-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .fields { 
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 20px;
+    max-width: 90%;
 }
 
 .fields input {

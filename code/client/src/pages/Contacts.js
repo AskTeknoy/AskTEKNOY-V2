@@ -100,35 +100,36 @@ const Contacts = ({socket}) => {
                     showIcon
             />}
         </div>
-           
-            <div className='fields'>
-                <input 
-                    type="text" 
-                    value={fullName} 
-                    placeholder='Full name' 
-                    onChange={(e) => setFullName(e.target.value)}
-                     onKeyPress={(e) => e.key === "Enter" && saveResponse()}
-                    />
-                
-                <input 
-                    type="text" 
-                    value={emailAddress} 
-                    placeholder='Email address' 
-                    onChange={(e) => setEmailAddress(e.target.value)}
-                     onKeyPress={(e) => e.key === "Enter" && saveResponse()}
-                    />
-            </div>   
-
-            <textarea 
-                name="Message" 
-                value={message} 
-                placeholder="Message" 
-                cols="107" rows="15" 
-                onChange={(e) => setMesssage(e.target.value)}
-                onKeyPress={(e) => e.key === "Enter" && saveResponse()}
+           <div className='fields-container'>
+                <div className='fields'>
+                    <input 
+                        type="text" 
+                        value={fullName} 
+                        placeholder='Full name' 
+                        onChange={(e) => setFullName(e.target.value)}
+                        onKeyPress={(e) => e.key === "Enter" && saveResponse()}
+                        />
                     
-                ></textarea>
+                    <input 
+                        type="text" 
+                        value={emailAddress} 
+                        placeholder='Email address' 
+                        onChange={(e) => setEmailAddress(e.target.value)}
+                        onKeyPress={(e) => e.key === "Enter" && saveResponse()}
+                        />
+                </div>   
 
+                <textarea 
+                    name="Message" 
+                    value={message} 
+                    placeholder="Message" 
+                    cols="107" rows="15" 
+                    onChange={(e) => setMesssage(e.target.value)}
+                    onKeyPress={(e) => e.key === "Enter" && saveResponse()}
+                        
+                ></textarea>
+           </div>
+          
             <div className='send-btn'>
                 <button 
                 onClick={saveResponse}
