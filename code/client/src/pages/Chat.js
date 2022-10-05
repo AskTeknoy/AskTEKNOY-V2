@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useState, useEffect, useRef } from 'react'; 
+import { useState, useEffect} from 'react'; 
 import { useSpeechSynthesis } from 'react-speech-kit'; 
 import ScrollToBottom from 'react-scroll-to-bottom';
 import { Alert } from 'react-st-modal';
@@ -13,6 +13,9 @@ import Message from '../components/MessageBody';
 import '../styles/Chat.css'; 
 import '../styles/responsive/chat-rwd.css';
 
+// photos 
+import AskTeknoyImg from '../pages/images/avatar/AskTeknoy.png';
+
 function Chat({socket}) {
   const [userQuery, setQuery] = useState(""); 
   const [messageList, setMessageList] = useState([]); 
@@ -21,7 +24,6 @@ function Chat({socket}) {
 
   const defaultAuthor = "Guest";
 
-  const bottomRef = useRef(null); 
   // speack  
   const { speak, speaking, cancel } =  useSpeechSynthesis(); 
 
@@ -65,7 +67,7 @@ function Chat({socket}) {
   const copyEmailLink = async (emailLink) => {
     copy(emailLink);
 
-    const result = await Alert("Email link copied to clipboard."); 
+    await Alert("Email link copied to clipboard."); 
   }
 
 
@@ -107,7 +109,13 @@ function Chat({socket}) {
         <p className="section-title">Start Chat AskTeknoy</p>
         <div className="chat-window">
             <div className="chat-header">
-                <p>AskTeknoy</p>
+                <div className="img-chat">
+                    <img src={AskTeknoyImg} alt="AskTEKNOY" />
+                </div>
+                <div className="chat-text">
+                    <p className="chat-title">AskTEKNOY</p>
+                    <p className="chat-smltxt">CIT-U Inquiry Chatbot</p>
+                </div>
             </div>
            
             <div className="chat-body">
@@ -117,11 +125,11 @@ function Chat({socket}) {
                         <> 
                             {messageContent.author === "AskTeknoy" ? 
                                 <Message 
-                                messageContent={messageContent} 
-                                index={index}
-                                handleClickFile={handleClickFile} 
-                                copyEmailLink={copyEmailLink}   
-                                author="AskTeknoy"
+                                    messageContent={messageContent} 
+                                    index={index}
+                                    handleClickFile={handleClickFile} 
+                                    copyEmailLink={copyEmailLink}   
+                                    author="AskTeknoy"
                             /> 
                             :
                             <Message 
@@ -136,20 +144,19 @@ function Chat({socket}) {
                     )
                 })}
             </ScrollToBottom>
-                <div ref={bottomRef} />
-            </div>
-            
-            <div className="chat-footer">
-                <input 
-                    type="text"
-                    value={userQuery}
-                    placeholder="Enter message..." 
-                    onClick={() => { setHasClicked(true)}}
-                    onChange={(event) => setQuery(event.target.value)} 
-                    onKeyPress={(event) => event.key === "Enter" && sendQuery()}
-                    />
-                <button onClick={sendQuery}>&#10148;</button>
-            </div>
+    
+                <div className="chat-footer">
+                    <input 
+                        type="text"
+                        value={userQuery}
+                        placeholder="Enter message..." 
+                        onClick={() => { setHasClicked(true)}}
+                        onChange={(event) => setQuery(event.target.value)} 
+                        onKeyPress={(event) => event.key === "Enter" && sendQuery()}
+                        />
+                    <button onClick={sendQuery}>&#10148;</button>
+                </div>
+            </div>        
         </div>
     </div>
   )

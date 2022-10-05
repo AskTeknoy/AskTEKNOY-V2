@@ -16,7 +16,17 @@ const Image = ({imgKey}) => {
     <div>
         {/* image content message */}                
         <img 
-            style={{width: 180, height: "auto", borderRadius: 10, marginBottom: 5, cursor: 'pointer'}} 
+            style={
+              { width: 180, 
+                height: "auto", 
+                borderRadius: 10, 
+                marginTop: 10,
+                marginBottom: 5, 
+                marginLeft: 6,
+                cursor: 'pointer', 
+                objectFit: 'cover',
+              }} 
+
             id="imageLoc" 
             // src={`../../public/image_location/${messageContent.imageName}.jpg`}
             src={LibraryImages[imgKey] || 'data:image/gif;base64,R0lGODlhAQABAAAQABAAA='}

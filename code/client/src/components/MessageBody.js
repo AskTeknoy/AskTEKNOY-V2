@@ -1,7 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
+
 import Image from './Image';
 import MapGoogle from './MapGoogle';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilePdf, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
 const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}) => {
   return (
@@ -16,16 +21,33 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
 
                 <div className="message-content">     
                     <p >{messageContent.message}</p>
-                    {/* link content */}
-                    <a  href={messageContent.link}>{messageContent.link}</a>
+                    {/* fb link content */}
+                    {messageContent.typeData === 'link' ? 
+                        <a  href={messageContent.link}>
+                            <FontAwesomeIcon icon={faFacebookSquare} />
+                            {messageContent.link}
+                        </a>
+                    : <></>
+                    }
 
                     {/* Send file pdf content */}
-                    <a  href="#" 
-                        onClick={(e) => { handleClickFile(e)}}>{messageContent.fileName}
-                    </a>
+                    {messageContent.typeData === 'file' ? 
+                        <a  href="#" 
+                            onClick={(e) => { handleClickFile(e)}}>
+                            <FontAwesomeIcon icon={faFilePdf} />
+                            {messageContent.fileName}
+                        </a>
+                    : <></>}
+                    
 
                     {/* Email content */}
-                    <a onClick={() => { copyEmailLink(messageContent.email)}}>{messageContent.email}</a>
+                    {messageContent.typeData === 'email' ? 
+                        <a onClick={() => { copyEmailLink(messageContent.email)}}>
+                            <FontAwesomeIcon icon={faEnvelope} />
+                            {messageContent.email}
+                        </a>
+                    : <></>
+                    }
                     
                     {/* Image Content */}
                     {messageContent.typeData === 'image' ? <Image imgKey={messageContent.imageName}/> : ''}

@@ -1,6 +1,6 @@
 /* ///// MEDIA QUERIES ////// */
 
- @media only screen and (max-width: 1360px){
+ @media only screen and (max-width: 1366px){
     
     /* ======== intro ========== */
     .description img { 
@@ -38,7 +38,7 @@
     /* Feedback Section */
     .feedback img { 
         max-width: 500px;
-        top: 500px;
+        top: 600px;
     }
 
     .form-section {

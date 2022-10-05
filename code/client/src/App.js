@@ -25,7 +25,7 @@ function App() {
           <Route path='/location' element={<MapGoogle />}/> 
 
         </Routes>
-          <Footer />
+          {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

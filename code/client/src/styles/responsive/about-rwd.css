@@ -1,3 +1,10 @@
+ @media only screen and (max-width: 1366px){
+    .overlay {
+        max-width: 100%;
+        height: 89%;
+    }
+ }
+ 
  @media only screen and (max-width: 1174px){
     .about-container .profiles{
         grid-template-columns: repeat(3, 1fr);

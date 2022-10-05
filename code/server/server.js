@@ -147,8 +147,6 @@ io.on("connection", socket => {
                         typeData: typeData, 
                         link: linkUrl, 
                         imageURL: null   
-
-
                     }
                     
                     // send bot response to client 
