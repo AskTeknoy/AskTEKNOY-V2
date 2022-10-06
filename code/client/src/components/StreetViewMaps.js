@@ -1,5 +1,6 @@
-import React, { useState }from 'react'
+import React, { useState, useEffect }from 'react'
 import ReactStreetview from "react-streetview";
+import { Client } from "@googlemaps/google-maps-services-js";
 
 import keys from './utils/key';
 
@@ -22,6 +23,10 @@ const MapGoogleSteetView = () => {
     showRoadLabels: true,
     zoomControl: true
   };
+
+  useEffect(() => {
+    const client = new Client({});
+  })
 
   // render street view
   return (
