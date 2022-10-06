@@ -12,27 +12,32 @@ const Image = ({imgKey}) => {
 
   return (
     <div>
-        {/* image content message */}                
-        <img 
+        {/* image content message */}  
+
+        <div>
+          <img 
             style={
-              { width: 180, 
+              { maxWidth: "100%",
+                width: 240,
                 height: "auto", 
                 borderRadius: 10, 
                 marginTop: 10,
                 marginBottom: 5, 
-                marginLeft: 6,
-                cursor: 'pointer', 
+                marginLeft: 1, 
                 objectFit: 'cover',
-              }} 
-
-            id="imageLoc" 
-            // src={`../../public/image_location/${messageContent.imageName}.jpg`}
-            src={LibraryImages[imgKey] || 'data:image/gif;base64,R0lGODlhAQABAAAQABAAA='}
-            onError= {e => e.target.style.display = 'none'}
-            // alt={messageContent.imageName}
-            alt='cit buildings'
-            onClick={() => handleClickedImg(LibraryImages[imgKey])}  
-        />
+                justifyContent: 'center',
+                } 
+              }
+              id="imageLoc" 
+              // src={`../../public/image_location/${messageContent.imageName}.jpg`}
+              src={LibraryImages[imgKey] || 'data:image/gif;base64,R0lGODlhAQABAAAQABAAA='}
+              onError= {e => e.target.style.display = 'none'}
+              // alt={messageContent.imageName}
+              alt='cit buildings'
+              onClick={() => handleClickedImg(LibraryImages[imgKey])}  
+          />
+        </div>              
+        
         {/* {clickedImg && 
           <ModalImage 
             clickedImg={LibraryImages[imgKey]} 
