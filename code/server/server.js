@@ -127,10 +127,11 @@ io.on("connection", socket => {
         const intent = response.intent; // user intent
         
         if(response.answer){
+            // || intent.includes("link")
 
-            // link website intents
-            if(intent.includes("website") || intent.includes("fb.page") || intent.includes("link")){
-                typeData = "link"; 
+            // fb page website intents
+            if(intent.includes("fb.page") ){
+                typeData = "fb-link"; 
                 console.log(typeData);
                 
                 try {
@@ -156,7 +157,30 @@ io.on("connection", socket => {
                     console.log(err); 
                 }
             }
+            // website response 
 
+            else if(intent.includes("website") || intent.includes("link")){
+                typeData = "website"; 
+
+                 // website link url 
+                const webLinkUrl = extractUrl(response.answer)[0]; 
+
+                // separate link and non link
+                const messageLink = (response.answer).replace(webLinkUrl, ""); 
+                                    
+
+                botMessageContent = {
+                        author: "AskTeknoy", 
+                        message: messageLink,
+                        time: time, 
+                        typeData: typeData, 
+                        link: webLinkUrl, 
+                        imageURL: null   
+                }
+                
+                await socket.emit("receive-message", botMessageContent);
+
+            }
             // email intent
             else if(intent.includes("email") || intent.includes("emails")){
                 typeData = "email"; 

@@ -80,7 +80,7 @@
     transform: translateX(10px);
 }
 
-.overlay { 
+.overlay-effect { 
     position: absolute;
     top: 0; 
     left: 0; 
@@ -96,6 +96,6 @@
     border-radius: 40px;
 }
 
-.overlay:hover { 
+.overlay-effect:hover { 
     opacity: 1;
 }

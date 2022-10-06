@@ -235,7 +235,11 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* font awesome icons */
-.fa-file-pdf, .fa-square-facebook, .fa-envelope {
+.fa-file-pdf, 
+.fa-square-facebook, 
+.fa-envelope,
+.fa-globe 
+{
   color: #971921;
   margin-top: 1px;
   margin-right: 4px;

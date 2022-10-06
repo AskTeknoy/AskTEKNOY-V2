@@ -5,7 +5,7 @@ import Image from './Image';
 import MapGoogle from './MapGoogle';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilePdf, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFilePdf, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
 const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}) => {
@@ -20,9 +20,21 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
                 </div>
 
                 <div className="message-content">     
+                    {/* default message */}
                     <p >{messageContent.message}</p>
+
+
+                    {/* website link url */}
+                    {messageContent.typeData === 'website' ? 
+                        <a  href={messageContent.link}>
+                            <FontAwesomeIcon icon={faGlobe} />
+                            {messageContent.link}
+                        </a>
+                        : <></>
+                    }
+
                     {/* fb link content */}
-                    {messageContent.typeData === 'link' ? 
+                    {messageContent.typeData === 'fb-link' ? 
                         <a  href={messageContent.link}>
                             <FontAwesomeIcon icon={faFacebookSquare} />
                             {messageContent.link}

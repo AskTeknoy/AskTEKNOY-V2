@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 // static photos 
 import Darius from "./images/team_profiles/darius.jpg"; 
 import Khyle from "./images/team_profiles/khyle.jpg";
@@ -19,7 +18,6 @@ const About = () => {
   const [IsDisplayRay, setIsDisplayRay] = useState(false);
   const [IsDisplayStefan, setIsDisplayStefan] = useState(false);
 
-
   const developers = [
         {name: 'Kim Darius Panis', role: 'Lead Developer', github: "https://github.com/WhooperDar", fb: "https://www.facebook.com/whooperdrs/", imgFile: Darius, nickName: 'Dars'},
         {name: 'Khyle Cardosa', role: 'UI/UX Designer', github: "https://github.com/kvcards26", fb: "https://www.facebook.com/kvcards26", imgFile: Khyle, nickName: 'Khyle'},
@@ -36,22 +34,18 @@ const About = () => {
     else if(profile === 'Khyle'){
         setIsDisplayKhyle(true); 
         return;
-
     }
     else if(profile === 'Ray'){
         setIsDisplayRay(true);
         return;
-
     }
     else if(profile === 'Jessa'){
         setIsDisplayJessa(true);
         return;
-
     }
     else if(profile === 'Stefan'){
         setIsDisplayStefan(true);
         return;
-
     }
     else {
         setIsDisplayDars(false);
@@ -60,16 +54,15 @@ const About = () => {
         setIsDisplayJessa(false);
         setIsDisplayStefan(false);
         return;
-
     }
   }
 
   useEffect(() => {
     document.title = "AskTeknoy | About Us";
   }, [])
+  
   return (
     <div>
-        
         <div className="about-title">
             <h2>About Us</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima tempora dolorum at consequatur!</p>
@@ -79,19 +72,16 @@ const About = () => {
          <div className="profiles">
             {developers.map((developer) =>{
                 return(            
-                     <div className='container'>
-                        
+                     <div className='container'>                    
                         <img className='profile-pic' src={developer.imgFile} alt={developer.name} />
                         <h2 onClick={() => { displayAboutInfo(developer.nickName) }} className='title'>{developer.name}</h2>
                         <p className='role'>{developer.role}</p>
 
-                        <div className='overlay overlay-fade'>
-                            <a href={developer.github}><img className='logo-social' src={require(`../pages/images/logo/github.png`)} alt="github" /></a>
-                            <a href={developer.fb}><img className='logo-social' src={require(`../pages/images/logo/fb-logo.png`)} alt="fb" /></a>
+                        <div className='overlay-effect'>
+                            <a href={developer.github}><img className='logo-social' src={require(`../pages/images/logo/github-askteknoy.png`)} alt="github--" /></a>
+                            <a href={developer.fb}><img className='logo-social' src={require(`../pages/images/logo/fb-logo-askteknoy.png`)} alt="fb----" /></a>
                         </div>
-   
                         {/* {IsDisplayRay && <Profiles name={developer.name} role={developer.role} age={developer.age}  imgFile={developer.imgFile} imageName={developer.name}/>} */}
-                    
                     </div>    
                 )      
             })}   

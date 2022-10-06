@@ -9,9 +9,14 @@ import FileDownload from 'js-file-download';
 import moment from 'moment';
 import copy from 'copy-to-clipboard';
 
+// components
 import Message from '../components/MessageBody';
 import '../styles/Chat.css'; 
 import '../styles/responsive/chat-rwd.css';
+
+// font awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMicrophoneSlash } from '@fortawesome/free-solid-svg-icons';
 
 // photos 
 import AskTeknoyImg from '../pages/images/avatar/AskTeknoy.png';
@@ -25,10 +30,11 @@ function Chat({socket}) {
   const defaultAuthor = "Guest";
 
   // speack  
-  const { speak, speaking, cancel } =  useSpeechSynthesis(); 
+  const { speak, speaking, cancel, voices} =  useSpeechSynthesis(); 
 
   let messageData = { }; 
 
+  // user query
   const sendQuery = async () => {
     if(userQuery !== ""){
     
@@ -61,29 +67,32 @@ function Chat({socket}) {
         console.log(res);
         FileDownload(res.data, `${fileName}`); 
     })
+
     .catch(err => alert("File does not exist"));
   }
 
+  // email to clipboard
   const copyEmailLink = async (emailLink) => {
     copy(emailLink);
 
     await Alert("Email link copied to clipboard."); 
   }
 
-
   useEffect(() => { 
     document.title = "Start Ask AskTeknoy";
 
-    // receive message from bot
+    // receive message from bot 
     socket.off("receive-message").on('receive-message', (botMessageRes) => { 
         setMessageList((list) => [...list, botMessageRes])
 
         // text to speech
+        // Google UK English male voice
         if(speaking){
             cancel();
-            speak({text: botMessageRes.message}); 
+            speak({text: botMessageRes.message, voice: voices[9]}); 
         } else {
-            speak({text: botMessageRes.message}); 
+            speak({text: botMessageRes.message, voice: voices[9]}); 
+ 
         }
         
         if(botMessageRes.typeData === "file"){ 
@@ -102,7 +111,7 @@ function Chat({socket}) {
         }
     })
 
-  }, [cancel, hasClicked, socket, speak, speaking]);
+  }, [cancel, hasClicked, socket, speak, speaking, voices]);
 
   return (
     <div className="App">
@@ -115,7 +124,11 @@ function Chat({socket}) {
                 <div className="chat-text">
                     <p className="chat-title">AskTEKNOY</p>
                     <p className="chat-smltxt">CIT-U Inquiry Chatbot</p>
+                
                 </div>
+                {/* <div className='mic'>
+                    <FontAwesomeIcon icon={faMicrophoneSlash} />
+                </div> */}
             </div>
            
             <div className="chat-body">
