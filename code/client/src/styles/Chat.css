@@ -19,9 +19,10 @@ body {
 
 /* chat window */
 .chat-window {
-  margin-top: 20px;
+  margin: 0 20px;
   width: 600px;
-  height: 500px; 
+  box-shadow: 2px 3px #e0e0e0 ;
+  border-radius: 20px;
 }
 
 .chat-window p {
@@ -99,14 +100,13 @@ body {
   max-width: auto;
   height: auto;
   min-height: 30px;
-  max-width: 13rem;
+  max-width: 17rem;
   background-color: #971921;
   border-radius: 10px;
   color: white;
   margin: 5px 5px 0; 
   padding: 5px 8px 5px 10px; 
-  overflow-wrap: break-word;
-  word-break: break-all;
+  overflow-wrap: break-word; 
 }
 
 .chat-body .message-container .message .message-box {
@@ -224,6 +224,7 @@ html::-webkit-scrollbar-thumb {
   display: flex; 
   font-weight: bold;
   color:#971921; 
+  word-break: break-all;
 }
 
 .message-container .message .message-content a:hover {

@@ -3,6 +3,8 @@ import React from 'react'
 
 import Image from './Image';
 import MapGoogle from './MapGoogle';
+import MapGoogleSteetView from './StreetViewMaps'; 
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
@@ -64,8 +66,11 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
                     {/* Image Content */}
                     {messageContent.typeData === 'image' ? <Image imgKey={messageContent.imageName}/> : ''}
 
-                    {/* Map content intents */}
+                    {/* Map Content */}
                     {messageContent.typeData === "map" ? <MapGoogle /> : null}
+                
+                    {/* Street View Content */}
+                    {messageContent.typeData === "streetview" ? <MapGoogleSteetView /> : null}
                 </div>
             </div>
             

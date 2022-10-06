@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import  LibraryImages  from './LibraryImages.js';
 
-import ModalImage from './ModalImage.js';
-
 import '../styles/Image.css'
 const Image = ({imgKey}) => {
   const [clickedImg, setClickedImg] = useState(null);
