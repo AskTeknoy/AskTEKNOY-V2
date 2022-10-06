@@ -92,12 +92,11 @@ body {
   flex-direction: row;
 }
 
-
 .chat-window .chat-body .message .message-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: auto;
+  width: auto;
   height: auto;
   min-height: 30px;
   max-width: 17rem;

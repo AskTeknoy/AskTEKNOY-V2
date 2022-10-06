@@ -253,6 +253,11 @@
         padding: 5px 0;
     }
 
+
+    .circle { 
+        clip-path: circle(30% at center 2%);
+    }
+
     .description {
         display: flex;
         flex-direction: column;

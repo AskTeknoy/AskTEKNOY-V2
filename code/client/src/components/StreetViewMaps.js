@@ -24,6 +24,7 @@ const MapGoogleSteetView = () => {
     zoomControl: true
   };
 
+  // render client google maps api
   useEffect(() => {
     const client = new Client({});
   })
