@@ -234,6 +234,26 @@ io.on("connection", socket => {
                     console.log("Error"); 
                 }
             }
+
+            // street view intent
+            else if(intent.includes("streetview")){
+                typeData = "streetview"; 
+
+                try { 
+                    
+                    botMessageContent = { 
+                        typeData: typeData, 
+                        author: "AskTeknoy", 
+                        time: time, 
+                        message: response.answer, 
+                    }
+
+                    await socket.emit("receive-message", botMessageContent);
+                }
+                catch(error){
+                    console.log(error); 
+                }
+            }
             // send pdf syllabus
             else if(intent.includes("syllabus")){
                 typeData = "file"; 

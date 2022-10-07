@@ -52,6 +52,28 @@ body {
   flex-direction: column; 
 }
 
+/* mute button */
+.chat-window .chat-header .mic {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-right: 1em;
+}
+
+.chat-window .chat-header .mic button {
+  background-color: #971921;
+  border: none;
+  cursor: pointer;
+}
+
+/* // font-awesome */
+.fa-microphone, .fa-microphone-slash {
+  position: relative;
+  font-size: 27px;
+  color: #fff;
+}
+
 .chat-window .chat-header .chat-text .chat-title {
   margin-bottom: 0;
   padding-bottom: 0;

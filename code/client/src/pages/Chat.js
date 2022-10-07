@@ -16,7 +16,7 @@ import '../styles/responsive/chat-rwd.css';
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMicrophoneSlash } from '@fortawesome/free-solid-svg-icons';
+import { faMicrophone, faMicrophoneSlash } from '@fortawesome/free-solid-svg-icons';
 
 // photos 
 import AskTeknoyImg from '../pages/images/avatar/AskTeknoy.png';
@@ -26,11 +26,12 @@ function Chat({socket}) {
   const [messageList, setMessageList] = useState([]); 
   const [fileName, setFileName] = useState(""); 
   const [hasClicked, setHasClicked] = useState(false);
+  const [offAudio, setOffAudio] = useState(true);
 
   const defaultAuthor = "Guest";
 
   // speack  
-  const { speak, speaking, cancel, voices} =  useSpeechSynthesis(); 
+  const { speak, speaking, cancel, voices } = useSpeechSynthesis(); 
 
   let messageData = { }; 
 
@@ -51,6 +52,20 @@ function Chat({socket}) {
     }
 
     setQuery(" "); 
+  }
+
+  // turn off audio
+  const turnOffAudio = () => {
+
+    if(offAudio){
+        setOffAudio(!offAudio);
+        cancel();
+        return;
+    }
+    else {  
+
+    }
+    
   }
 
   // render download data file
@@ -88,11 +103,23 @@ function Chat({socket}) {
         // text to speech
         // Google UK English male voice
         if(speaking){
-            cancel();
-            speak({text: botMessageRes.message, voice: voices[9]}); 
+            if(!offAudio){
+                cancel();
+                speak({text: botMessageRes.message, voice: voices[9]});
+                return;
+            }
+            else {
+                cancel();
+            }
+            
         } else {
-            speak({text: botMessageRes.message, voice: voices[9]}); 
- 
+            if(!offAudio){
+                speak({text: botMessageRes.message, voice: voices[9]}); 
+                return;
+            } 
+            else {
+                cancel();
+            }
         }
         
         if(botMessageRes.typeData === "file"){ 
@@ -111,7 +138,7 @@ function Chat({socket}) {
         }
     })
 
-  }, [cancel, hasClicked, socket, speak, speaking, voices]);
+  }, [cancel, hasClicked, socket, speak, speaking, voices, offAudio]);
 
   return (
     <div className="App">
@@ -124,13 +151,18 @@ function Chat({socket}) {
                 <div className="chat-text">
                     <p className="chat-title">AskTEKNOY</p>
                     <p className="chat-smltxt">CIT-U Inquiry Chatbot</p>
-                
                 </div>
-                {/* <div className='mic'>
-                    <FontAwesomeIcon icon={faMicrophoneSlash} />
-                </div> */}
+
+                <div className='mic'>
+                    <button onClick={turnOffAudio}>
+                        {offAudio === true? 
+                            <FontAwesomeIcon icon={faMicrophoneSlash} /> 
+                            : 
+                            <FontAwesomeIcon icon={faMicrophone} />}
+                        </button>
+                </div>
+                
             </div>
-           
             <div className="chat-body">
             <ScrollToBottom className="message-container" mode="bottom">
                 {messageList.map((messageContent, index) => {
