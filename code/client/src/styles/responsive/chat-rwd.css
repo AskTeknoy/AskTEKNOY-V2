@@ -28,7 +28,7 @@
 
     
     .chat-window .chat-body {
-        height: calc(550px - (45px + 70px));
+        height: calc(650px - (45px + 70px));
     }
 
     .chat-window .chat-body .message .message-content {

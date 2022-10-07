@@ -137,8 +137,12 @@ section .intro {
 .how-to-use {
     display: flex;
     justify-content: space-between;
-    margin: 5em 0 ;
-    padding: 7em 0 50px 7px;
+    margin: 3em 0 ;
+    padding: 4em 0 50px 7px;
+}
+
+.how-to-use .how-description {
+    margin-top: 7em;
 }
 
 .how-to-use .how-description h2{
@@ -152,6 +156,20 @@ section .intro {
     color:rgb(138, 135, 135);
     line-height: 35px;
     font-size: 15px;
+}
+
+.how-to-use .how-img {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 5em;
+}
+
+.how-to-use .how-img img {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
 }
 
 

@@ -89,9 +89,19 @@
     .feedback .form .send-feedback-title {
         font-size: 32px;
     }
+
+    /* how to use section */
+    .how-to-use .how-description {
+        margin-top: 5em;
+        max-width: 45%;
+    }
+
+    .how-to-use .how-img {
+        margin: 0 1.5em;
+    }
 }
 
-@media only screen and (max-width: 1075px) {
+@media only screen and (max-width: 1085px) {
     /* intro section */
     .circle { 
         width: 50%;
@@ -245,6 +255,54 @@
     .feedback .form .feedback-btn button {
         padding: 10px 35px;
     }
+
+    /* how to use section */
+    .how-to-use .how-description {
+        margin-top: 5em;
+        max-width: 45%;
+    }
+
+    .how-to-use .how-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .how-to-use .how-img img {
+        width: 350px;
+        max-width: 500px;
+        height: auto;
+    }
+
+
+    .how-to-use .how-description p {
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    .how-to-use .how-description h2 {
+        font-size: 45px;
+        line-height: 30px;
+    }
+
+
+}
+
+@media only screen and (max-width: 711px) {
+    .how-to-use {
+        display: block;
+        margin-top: 3em;
+    }
+
+    .how-to-use .how-description {
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .how-to-use .how-img {
+        margin: 3rem auto;
+    }
 }
 
 @media only screen and (max-width: 694px){
@@ -330,5 +388,11 @@
 
     .chat-section a {
         font-size: 16px;
+    }
+
+    /* how to use */
+
+    .how-to-use {
+        margin-top: 3em;
     }
 }

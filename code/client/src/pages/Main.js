@@ -156,7 +156,7 @@ const Main = ({socket}) => {
                   praesentium!</p>
           </div>
           <div className="how-img">
-              <img src="" alt="Chat System"/>
+              <img src={require("./images/logo/how-to-use.png")} alt="Chat System"/>
           </div>
       </div>
 

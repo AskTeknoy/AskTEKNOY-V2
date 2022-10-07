@@ -56,16 +56,11 @@ function Chat({socket}) {
 
   // turn off audio
   const turnOffAudio = () => {
+    setOffAudio(!offAudio);
 
     if(offAudio){
-        setOffAudio(!offAudio);
         cancel();
-        return;
-    }
-    else {  
-
-    }
-    
+    }  
   }
 
   // render download data file
