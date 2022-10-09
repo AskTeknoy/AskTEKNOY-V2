@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import validator from 'email-validator'; 
 import { Alert } from 'antd'; 
 
+
 import 'antd/dist/antd.css';
 import '../styles/Main.css'; 
 import '../styles/responsive/main-rwd.css';
@@ -65,12 +66,7 @@ const Main = ({socket}) => {
             <div className="description">
                 <div className="content">
                     <h2 className='title-intro'>Start chatting with the new university inquiry bot</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et vel cupiditate eos sed quod mollitia
-                        vitae
-                        at est perferendis expedita provident placeat consectetur adipisicing elit. Et vel cupiditate
-                        eos
-                        sed
-                        quod mollitia vitae at est perferendis expedita provident placeat</p>
+                    <p>Do you have unanswered questions regarding school matters that require an immediate response? Try asking AskTeknoy! It is a trained university chatbot that provides a reliable and 24/7 customer support to help students, parents, teachers or any individual who have questions and concerns about CIT-U.</p>
 
                     <Link to="/chatbot">Start Chatting Now &#10140;</Link>
                 </div>

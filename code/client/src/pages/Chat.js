@@ -26,7 +26,7 @@ function Chat({socket}) {
   const [messageList, setMessageList] = useState([]); 
   const [fileName, setFileName] = useState(""); 
   const [hasClicked, setHasClicked] = useState(false);
-  const [offAudio, setOffAudio] = useState(true);
+  const [offAudio, setOffAudio] = useState(false);
 
   const defaultAuthor = "Guest";
 

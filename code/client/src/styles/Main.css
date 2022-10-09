@@ -36,8 +36,9 @@ section .intro {
     max-width: 500px;
     color:rgb(138, 135, 135);
     word-wrap: break-word;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     line-height: 30px;
+    font-size: 1.2em;
 }
 
 .description img {
