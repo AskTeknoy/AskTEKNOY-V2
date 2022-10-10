@@ -23,7 +23,6 @@ function App() {
           <Route path='/contacts' element={<Contacts socket={socket}/>}/>
           <Route path='/about' element={<About />}/> 
           <Route path='/location' element={<MapGoogle />}/> 
-
         </Routes>
           {/* <Footer /> */}
       </BrowserRouter>

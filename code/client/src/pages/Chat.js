@@ -135,6 +135,7 @@ function Chat({socket}) {
 
   }, [cancel, hasClicked, socket, speak, speaking, voices, offAudio]);
 
+
   return (
     <div className="App">
         <p className="section-title">Start Chat AskTeknoy</p>
@@ -189,7 +190,7 @@ function Chat({socket}) {
                     <input 
                         type="text"
                         value={userQuery}
-                        placeholder="Enter message..." 
+                        placeholder={"Enter message..." || userQuery} 
                         onClick={() => { setHasClicked(true)}}
                         onChange={(event) => setQuery(event.target.value)} 
                         onKeyPress={(event) => event.key === "Enter" && sendQuery()}
