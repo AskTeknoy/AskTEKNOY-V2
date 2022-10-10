@@ -242,6 +242,8 @@ html::-webkit-scrollbar-thumb {
 
 .message-container .message .message-content .link-content {
   display: flex; 
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   color:#fff; 
   word-break: break-all;
@@ -265,7 +267,7 @@ html::-webkit-scrollbar-thumb {
 .fa-globe 
 {
   color: #fff;
-  margin: 1px 7px 0;
+  margin: auto 7px 0;
   font-size: 2.5rem;
   text-shadow: 2px 2px #e4e2e2;
 }

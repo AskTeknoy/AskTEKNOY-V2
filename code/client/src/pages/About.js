@@ -62,7 +62,7 @@ const About = () => {
   }, [])
   
   return (
-    <div>
+    <div className='about-view'>
         <div className="about-title">
             <h2>About Us</h2>
             <p> We are looking forward to welcome you in our campus at N. Bacalso Ave., Cebu City, Cebu, Philippines, 6000. You can call us on 261-7741 and 411-2000.</p>
