@@ -3,10 +3,15 @@ import React, { useState, useEffect } from 'react'
 import { Alert } from 'antd'; 
 import moment from 'moment';
 import validator from 'email-validator'; 
+import { Offline, Online } from "react-detect-offline";
 
+// styles 
 import 'antd/dist/antd.css';
 import '../styles/Contacts.css';
 import '../styles/responsive/contact-rwd.css';
+
+// skeletal design 
+import SkeletonContact from '../components/skeleton/SkeletonContact';
 
 
 const Contacts = ({socket}) => {
@@ -63,82 +68,91 @@ const Contacts = ({socket}) => {
   }, [socket])
 
   return (
-    <div className='contact-container'>
-        <div className="contact">
-            <div className="descript-contact">
-                <h2>Contact Us</h2>
-                <p>Got any questions to the team? Fill up the form <br/> below and we'll get in touch</p>
-            </div>
+    <>
+        <Online>
+            <SkeletonContact />
+        </Online>
 
-        <div className='alerts'>
-     
-             {isSuccess &&
-                <Alert 
-                    type='success'
-                    message='Success'
-                    description="Your response have been saved"
-                    closable
-                    showIcon
-            />}
 
-            {isInvalidEmail &&
-                 <Alert 
-                    type='warning'
-                    message='Warning'
-                    description="Your email is invalid, please try again."
-                    closable
-                    showIcon
-            />}
+        <Offline>       
+            <div className='contact-container'>
+                <div className="contact">
+                    <div className="descript-contact">
+                        <h2>Contact Us</h2>
+                        <p>Got any questions to the team? Fill up the form <br/> below and we'll get in touch</p>
+                    </div>
 
+                <div className='alerts'>
             
-            {isErrorData && 
-                <Alert 
-                    type='error'
-                    message='Error'
-                    description="Can't saved your query, please try again later."
-                    closable
-                    showIcon
-            />}
-        </div>
-           <div className='fields-container'>
-                <div className='fields'>
-                    <input 
-                        type="text" 
-                        value={fullName} 
-                        placeholder='Full name' 
-                        onChange={(e) => setFullName(e.target.value)}
-                        onKeyPress={(e) => e.key === "Enter" && saveResponse()}
-                        />
+                    {isSuccess &&
+                        <Alert 
+                            type='success'
+                            message='Success'
+                            description="Your response have been saved"
+                            closable
+                            showIcon
+                    />}
+
+                    {isInvalidEmail &&
+                        <Alert 
+                            type='warning'
+                            message='Warning'
+                            description="Your email is invalid, please try again."
+                            closable
+                            showIcon
+                    />}
+
                     
-                    <input 
-                        type="text" 
-                        value={emailAddress} 
-                        placeholder='Email address' 
-                        onChange={(e) => setEmailAddress(e.target.value)}
-                        onKeyPress={(e) => e.key === "Enter" && saveResponse()}
-                        />
-                </div>   
+                    {isErrorData && 
+                        <Alert 
+                            type='error'
+                            message='Error'
+                            description="Can't saved your query, please try again later."
+                            closable
+                            showIcon
+                    />}
+                </div>
+                <div className='fields-container'>
+                        <div className='fields'>
+                            <input 
+                                type="text" 
+                                value={fullName} 
+                                placeholder='Full name' 
+                                onChange={(e) => setFullName(e.target.value)}
+                                onKeyPress={(e) => e.key === "Enter" && saveResponse()}
+                                />
+                            
+                            <input 
+                                type="text" 
+                                value={emailAddress} 
+                                placeholder='Email address' 
+                                onChange={(e) => setEmailAddress(e.target.value)}
+                                onKeyPress={(e) => e.key === "Enter" && saveResponse()}
+                                />
+                        </div>   
 
-                <textarea 
-                    name="Message" 
-                    value={message} 
-                    placeholder="Message" 
-                    cols="107" rows="15" 
-                    onChange={(e) => setMesssage(e.target.value)}
-                    onKeyPress={(e) => e.key === "Enter" && saveResponse()}
-                        
-                ></textarea>
-           </div>
-          
-            <div className='send-btn'>
-                <button 
-                onClick={saveResponse}
-             
-                >Send</button>
+                        <textarea 
+                            name="Message" 
+                            value={message} 
+                            placeholder="Message" 
+                            cols="107" rows="15" 
+                            onChange={(e) => setMesssage(e.target.value)}
+                            onKeyPress={(e) => e.key === "Enter" && saveResponse()}
+                                
+                        ></textarea>
+                </div>
+                
+                    <div className='send-btn'>
+                        <button 
+                        onClick={saveResponse}
+                    
+                        >Send</button>
+                    </div>
+
+                </div>
             </div>
-
-        </div>
-    </div>
+        </Offline> 
+    </>
   )
 }
 

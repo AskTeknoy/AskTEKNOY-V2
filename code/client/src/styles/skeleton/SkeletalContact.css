@@ -1,0 +1,20 @@
+.contact-skeletal {
+    display: flex;
+    justify-content: center;
+    margin: 6em auto 0;
+    width: 30%;
+    flex-direction: column;
+
+}
+
+.contact-skeletal .forms-skeletal{
+    margin: 40% auto;
+    transform: scale(7);
+}
+
+.contact-skeletal .form-skele-btn {
+    display: flex;
+    margin: 0 auto;
+    transform: scaleX(1.5);
+
+}

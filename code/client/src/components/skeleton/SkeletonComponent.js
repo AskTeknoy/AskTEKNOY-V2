@@ -26,9 +26,11 @@ const SkeletonComponentMain = ({type }) => {
         </div>
 
         <div className="image-skele">
+          <div>
             <SkeletonImage 
               active={true}
               />
+          </div>
         </div>
       </div>
       

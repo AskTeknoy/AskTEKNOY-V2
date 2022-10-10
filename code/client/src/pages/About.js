@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Offline, Online } from "react-detect-offline";
 
 // static photos 
 import Darius from "./images/team_profiles/darius.jpg"; 
@@ -9,7 +10,7 @@ import Stefan from './images/team_profiles/stefan.jpg';
 
 import '../styles/About.css';
 import '../styles/responsive/about-rwd.css';
-
+import SkeletonAbout from '../components/skeleton/SkeletonAbout';
 
 const About = () => {
   const [IsDisplayDars, setIsDisplayDars] = useState(false);
@@ -62,32 +63,42 @@ const About = () => {
   }, [])
   
   return (
-    <div className='about-view'>
-        <div className="about-title">
-            <h2>About Us</h2>
-            <p> We are looking forward to welcome you in our campus at N. Bacalso Ave., Cebu City, Cebu, Philippines, 6000. You can call us on 261-7741 and 411-2000.</p>
-        </div>
+    <>
+        <Online>
+            <SkeletonAbout></SkeletonAbout>
+        </Online>
+        
+        <Offline>
+            <div className='about-view'>
+                <div className="about-title">
+                    <h2>About Us</h2>
+                    <p> We are looking forward to welcome you in our campus at N. Bacalso Ave., Cebu City, Cebu, Philippines, 6000. You can call us on 261-7741 and 411-2000.</p>
+                </div>
 
-         <div className='about-container'> 
-         <div className="profiles">
-            {developers.map((developer) =>{
-                return(            
-                     <div className='container'>                    
-                        <img className='profile-pic' src={developer.imgFile} alt={developer.name} />
-                        <h2 onClick={() => { displayAboutInfo(developer.nickName) }} className='title'>{developer.name}</h2>
-                        <p className='role'>{developer.role}</p>
+                <div className='about-container'> 
+                <div className="profiles">
+                    {developers.map((developer) =>{
+                        return(            
+                            <div className='container'>                    
+                                <img className='profile-pic' src={developer.imgFile} alt={developer.name} />
+                                <h2 onClick={() => { displayAboutInfo(developer.nickName) }} className='title'>{developer.name}</h2>
+                                <p className='role'>{developer.role}</p>
 
-                        <div className='overlay-effect'>
-                            <a href={developer.github}><img className='logo-social' src={require(`../pages/images/logo/github-askteknoy.png`)} alt="github--" /></a>
-                            <a href={developer.fb}><img className='logo-social' src={require(`../pages/images/logo/fb-logo-askteknoy.png`)} alt="fb----" /></a>
-                        </div>
-                        {/* {IsDisplayRay && <Profiles name={developer.name} role={developer.role} age={developer.age}  imgFile={developer.imgFile} imageName={developer.name}/>} */}
-                    </div>    
-                )      
-            })}   
-         </div>         
-        </div>
-    </div>
+                                <div className='overlay-effect'>
+                                    <a href={developer.github}><img className='logo-social' src={require(`../pages/images/logo/github-askteknoy.png`)} alt="github--" /></a>
+                                    <a href={developer.fb}><img className='logo-social' src={require(`../pages/images/logo/fb-logo-askteknoy.png`)} alt="fb----" /></a>
+                                </div>
+                                {/* {IsDisplayRay && <Profiles name={developer.name} role={developer.role} age={developer.age}  imgFile={developer.imgFile} imageName={developer.name}/>} */}
+                            </div>    
+                        )      
+                    })}   
+                </div>         
+                </div>
+            </div>
+        </Offline>
+    
+    </>
+    
    
   )
 }
