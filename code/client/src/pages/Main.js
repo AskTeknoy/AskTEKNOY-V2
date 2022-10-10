@@ -10,8 +10,9 @@ import 'antd/dist/antd.css';
 import '../styles/Main.css'; 
 import '../styles/responsive/main-rwd.css';
 
-// skeletals
+// skeletons
 import SkeletonPageOne from '../components/skeleton/SkeletonPageOne';
+
 
 const Main = ({socket}) => {
     const [emailAddress, setEmailAddress] = useState("");
@@ -63,8 +64,8 @@ const Main = ({socket}) => {
 
     return (
     <section>
-        <SkeletonPageOne />
-        
+        {/* <SkeletonPageOne /> */}
+
         <div className='intro'>
             <div className="description">
                 <div className="content">
