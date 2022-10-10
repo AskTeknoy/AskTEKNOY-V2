@@ -9,10 +9,12 @@ const extractUrl = require('extract-urls');
 const email = require('node-email-extractor').default;
 const { findPhoneNumbersInText, findNumbers  } = require('libphonenumber-js');
 const path = require('path'); 
-
+const { sentenceCase } = require("sentence-case");
+const { capitalCase } = require('change-case');
 const { GetImageLocation, GetFile } = require('./firebase/getImage');
 const { SaveData, SaveDataFeedback } = require('./firebase/models/userContact');
 const { SendEmail } = require("./utils/SendEmail"); 
+
 const trainModel = require('./train'); // automatic train  model
 
 // middlewares 
@@ -127,12 +129,10 @@ io.on("connection", socket => {
         const intent = response.intent; // user intent
         
         if(response.answer){
-            // || intent.includes("link")
 
             // fb page website intents
             if(intent.includes("fb.page") ){
                 typeData = "fb-link"; 
-                console.log(typeData);
                 
                 try {
                     // link url 
@@ -140,7 +140,7 @@ io.on("connection", socket => {
 
                     // separate link and non link
                     const messageLink = (response.answer).replace(linkUrl, ""); 
-                                     
+
                     botMessageContent = {
                         author: "AskTeknoy", 
                         message: messageLink,
@@ -191,7 +191,6 @@ io.on("connection", socket => {
                     const emailUrlData = email.text(botAnswerEmail);
                     const emailUrl = emailUrlData.emails[0]; 
                     
-                    console.log(emailUrl);
                     // separate email and non email
                     const messageEmail = botAnswerEmail.replace(emailUrl, ""); 
 
@@ -259,7 +258,10 @@ io.on("connection", socket => {
                 typeData = "file"; 
                 try {
                     
-                    fileName = intent + ".pdf" ;   
+                    // intent.file -> Intent File
+                    const modifiedFileName = capitalCase(sentenceCase(intent));
+                    console.log(modifiedFileName)
+                    fileName = modifiedFileName + ".pdf" ;   
 
                     botMessageContent = {
                         author: "AskTeknoy", 
@@ -282,8 +284,6 @@ io.on("connection", socket => {
                 typeData = "contact"; 
                 const phoneNumber = findNumbers(response.answer, 'US'); 
                 // const newMessageContact = (response.answer).replace(phoneNumber, ""); 
-                
-                console.log(phoneNumber); 
 
                 botMessageContent = {
                     author: "AskTeknoy", 
@@ -305,7 +305,6 @@ io.on("connection", socket => {
                 try {
                     const imageName = `${intent}`; 
                     const imageFileName = imageName.replaceAll('.', '_');
-                    console.log(imageFileName);
                     
                     
                     // const imageURL = GetImageLocation(imageFileName); 
@@ -315,10 +314,7 @@ io.on("connection", socket => {
                     const imageURL =`../image_location/${intent}.jpg`; 
 
                     typeData = "image"; 
-                    console.log(typeData);
                     
-                    console.log(imageURL);
-
                     botMessageContent = {
                         author: "AskTeknoy", 
                         message: response.answer, 
@@ -370,6 +366,12 @@ io.on("connection", socket => {
 
             });   
         }
+
+        console.log("======= User Bot interaction ========"); 
+        console.log(`User Message: ${messageClient.message}`);
+        console.log(`Bot Message: ${response.answer}`);
+        console.log("=====================================\n\n"); 
+    
     })
 
     socket.on("disconnect", () => { 

@@ -35,7 +35,6 @@ body {
   border-radius: 15px 15px 0 0; 
   background: #971921;
   position: relative;
-  cursor: pointer;
 }
 
 .chat-window .chat-header .img-chat img {
@@ -109,7 +108,7 @@ body {
 
 .chat-window .chat-body .message {
   height: auto;
-  padding: 10px;
+  padding: 7px;
   display: flex;
   flex-direction: row;
 }
@@ -125,7 +124,7 @@ body {
   background-color: #971921;
   border-radius: 10px;
   color: white;
-  margin: 5px 5px 0; 
+  margin: 2px 5px 0; 
   padding: 5px 8px 5px 10px; 
   overflow-wrap: break-word; 
 }
@@ -241,14 +240,17 @@ html::-webkit-scrollbar-thumb {
 } 
 
 
-.message-container .message .message-content a {
+.message-container .message .message-content .link-content {
   display: flex; 
   font-weight: bold;
-  color:#971921; 
+  color:#fff; 
   word-break: break-all;
+  background-color: #971921;
+  border-radius: 7px;
+  padding: 8px;
 }
 
-.message-container .message .message-content a:hover {
+.message-container .message .message-content .link-content:hover {
   text-decoration: underline;
 }
 
@@ -262,10 +264,10 @@ html::-webkit-scrollbar-thumb {
 .fa-envelope,
 .fa-globe 
 {
-  color: #971921;
-  margin-top: 1px;
-  margin-right: 4px;
-  font-size: 20px;
+  color: #fff;
+  margin: 1px 7px 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px #e4e2e2;
 }
 
 

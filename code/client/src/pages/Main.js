@@ -13,7 +13,6 @@ import '../styles/responsive/main-rwd.css';
 // skeletons
 import SkeletonPageOne from '../components/skeleton/SkeletonPageOne';
 
-
 const Main = ({socket}) => {
     const [emailAddress, setEmailAddress] = useState("");
     const [feedbackMessage, setFeedBackMessage] = useState(""); 

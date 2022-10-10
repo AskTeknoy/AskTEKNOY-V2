@@ -12,6 +12,17 @@
        width: 500px;
        height: 1000px;
     }
+
+    .fa-file-pdf, 
+   .fa-square-facebook, 
+   .fa-envelope,
+   .fa-globe 
+   {
+   color: #fff;
+   margin: 0 6px 0;
+   font-size: 2rem;
+   }
+
  }
 
  @media only screen and (max-width: 687px){

@@ -28,7 +28,7 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
 
                     {/* website link url */}
                     {messageContent.typeData === 'website' ? 
-                        <a  href={messageContent.link}>
+                        <a className="link-content" href={messageContent.link}>
                             <FontAwesomeIcon icon={faGlobe} />
                             {messageContent.link}
                         </a>
@@ -37,7 +37,7 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
 
                     {/* fb link content */}
                     {messageContent.typeData === 'fb-link' ? 
-                        <a  href={messageContent.link}>
+                        <a className="link-content" href={messageContent.link}>
                             <FontAwesomeIcon icon={faFacebookSquare} />
                             {messageContent.link}
                         </a>
@@ -46,7 +46,7 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
 
                     {/* Send file pdf content */}
                     {messageContent.typeData === 'file' ? 
-                        <a  href="#" 
+                        <a  className="link-content" href="#" 
                             onClick={(e) => { handleClickFile(e)}}>
                             <FontAwesomeIcon icon={faFilePdf} />
                             {messageContent.fileName}
@@ -56,7 +56,7 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
 
                     {/* Email content */}
                     {messageContent.typeData === 'email' ? 
-                        <a onClick={() => { copyEmailLink(messageContent.email)}}>
+                        <a className="link-content" onClick={() => { copyEmailLink(messageContent.email)}}>
                             <FontAwesomeIcon icon={faEnvelope} />
                             {messageContent.email}
                         </a>
