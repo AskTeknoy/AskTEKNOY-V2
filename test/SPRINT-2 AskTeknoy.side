@@ -1,0 +1,1618 @@
+{
+  "id": "c6d85fa0-f78e-4d67-974f-1aeca6d72e2e",
+  "version": "2.0",
+  "name": "SPRINT-2 AskTeknoy",
+  "url": "http://localhost:3000/",
+  "tests": [{
+    "id": "b4c8b592-1904-4f38-a5b0-f8f780848bba",
+    "name": "Hi-greeting-queries",
+    "commands": [{
+      "id": "707b2941-1c7d-4275-b2aa-f7e881bf24ef",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c11bd214-d80f-4aee-bc2f-086da4cc9d7d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4220ecb-4fba-4d9a-99b5-39fe2b9ac598",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d46e8a1f-25cb-4027-a973-ab575522e310",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Hi']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Hi"
+    }, {
+      "id": "27d5b7e5-c6ce-4ef9-ba06-2fadc2c70363",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Hi']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c016f07a-f5cc-40cc-a433-2369f7bd3bd2",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Hello']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Hello"
+    }, {
+      "id": "a3703e5f-c11b-43a8-b50d-6fe7b6b9f633",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Hello']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "024b304b-2c04-4899-a731-e87d34519dfa",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='AskTeknoy']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "AskTeknoy"
+    }, {
+      "id": "cece9609-767c-4512-a16c-0f4a20c316f2",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='AskTeknoy']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "84229383-1376-4a99-aaa0-d794381a0186",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e8b9eb4e-ff2c-41d5-8216-c6be8f271fb2",
+    "name": "Goodbye-greeting-queries",
+    "commands": [{
+      "id": "69c99a1f-611c-4ff7-8746-328c37d5188d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9843f749-a843-4e6d-ac40-730ce5d6f401",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8723c142-5de6-4b03-9226-213783b66423",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9981abaf-52f9-49f4-9ab7-08962be8159c",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Goodbye']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Goodbye"
+    }, {
+      "id": "1f2421ca-dd15-4e2f-832a-51f8b050acc0",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Goodbye']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "527afb24-2189-493f-8f8a-6a969f882dbc",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Farewell']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Farewell"
+    }, {
+      "id": "77e1de9a-6669-49e1-855c-3fab7372c397",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Farewell']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "ed8db758-98f4-4e09-9df2-41de9015d024",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='I must go']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "I must go"
+    }, {
+      "id": "3c5e5efa-da6c-406d-b122-352e374fb140",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='I must go']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "6d545dcc-3353-4f5a-a985-be6bee5a7276",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "814a7090-5f64-4f01-9bfe-e035002f762a",
+    "name": "Default-quiry-response",
+    "commands": [{
+      "id": "49bc2d9f-f22f-428f-ba1c-4d7313ad7d2c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6525a2a-562a-4623-91a7-5fc12dcd1ba6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d57e5f4c-803d-49b5-81ec-7a3a8d524067",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea31d50b-fa5e-402d-b6a7-063f7accfad2",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='akjsdka']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "akjsdka"
+    }, {
+      "id": "546c5604-33bf-4a25-9880-8b14fd10fd0c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='akjsdka']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "26ac2866-e6a9-417a-b0b8-9c4ff4c40305",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' wewr']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " wewr"
+    }, {
+      "id": "185c220e-08bf-4143-8843-1f412f7e84cb",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' wewr']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "bfdeb9d5-5f6a-4da4-85be-2259ddf6b266",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' fklksd']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " fklksd"
+    }, {
+      "id": "b09c4b9f-2755-412f-a300-f561773abb85",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' fklksd']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "b52c100f-1020-4083-910e-d3d27d2ed406",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' sdkg']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " sdkg"
+    }, {
+      "id": "102b05df-6bd0-4e60-aaaa-64442cc431dc",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' sdkg']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f7f01624-a09c-46e7-9406-a3f1a588726f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3394.444580078125)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "285aa2f6-c305-4adf-a533-912f89df8d89",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "eb4cfe7c-76d6-476c-ba3c-a3388a462d34",
+    "name": "Fb-page-cit",
+    "commands": [{
+      "id": "5134bdab-3e7d-448b-97ec-e7dbfbfbc888",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f24648d-8a2d-413c-8db6-7977251a0cb0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db52a424-5158-433c-966c-8a0f6aff0792",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the fb page of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What is the fb page of cit?"
+    }, {
+      "id": "0f9f48bf-328a-4ebe-bd4b-2b022f4d0c45",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the fb page of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c29b959f-fb56-46d3-bc60-a540077404f8",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is the official fb page of cit-u?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " What is the official fb page of cit-u?"
+    }, {
+      "id": "51979ad3-91cd-4f9f-9856-4c2bef863f2a",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is the official fb page of cit-u?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "7f286c97-8b19-447f-ba10-2a30590716fc",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3394.444580078125)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ca03a28-a924-46bd-9512-8e45d3579913",
+      "comment": "",
+      "command": "click",
+      "target": "css=.message:nth-child(4) a",
+      "targets": [
+        ["css=.message:nth-child(4) a", "css:finder"],
+        ["xpath=(//a[contains(text(),'https://web.facebook.com/CITUniversity')])[2]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[4]/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://web.facebook.com/CITUniversity')])[2]", "xpath:href"],
+        ["xpath=//div[4]/div[2]/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win747",
+      "windowTimeout": 2000
+    }, {
+      "id": "cc9ed379-33d0-4fc1-8e41-54aa2aa5b041",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68bb51db-a356-4978-b39d-e750c8ec7987",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win747}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "508da54f-c778-4a69-974a-6ef931dafae6",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5733148a-32cd-4fe4-b255-bea56a08d409",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4de8d52f-3d81-4e5a-89fd-a4874a6a3e3e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.App",
+      "targets": [
+        ["css=.App", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c55a4fec-b694-44ca-b579-3d1415744b70",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a1f24371-8a17-4c30-a56a-452c28a4408a",
+    "name": "Fb-page-cpe",
+    "commands": [{
+      "id": "4d1301f9-4a9a-4a39-b432-429f04c99319",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ceee9063-cb2c-4876-9661-b8cdab9bc27f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8dc14d0-6032-4cee-aae5-c5f3bb16af8b",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f62b72cd-19bd-4c65-9555-7c8fe691447f",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the fb page of cpe?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What is the fb page of cpe?"
+    }, {
+      "id": "70369651-609a-4e0d-a61c-8a2acfb45984",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the fb page of cpe?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "01881afe-b20b-4d65-bdbe-60a8019b7827",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is official fb page of cpe?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " What is official fb page of cpe?"
+    }, {
+      "id": "8f087e56-40e6-4e65-b241-b6e881e1a23a",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is official fb page of cpe?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "7e6d2000-9935-4dd1-9c6c-653ad842f161",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3394.444580078125)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01c46b1f-c5fb-4ce3-87aa-2420126b695a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.message:nth-child(4) a",
+      "targets": [
+        ["css=.message:nth-child(4) a", "css:finder"],
+        ["xpath=(//a[contains(text(),'https://www.facebook.com/cituCPE')])[2]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[4]/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.facebook.com/cituCPE')])[2]", "xpath:href"],
+        ["xpath=//div[4]/div[2]/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6514",
+      "windowTimeout": 2000
+    }, {
+      "id": "614f75bc-9365-4a97-8126-3720932deca2",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8dc5022-de34-4af9-9122-829db6d67a36",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win6514}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "948135c8-1d47-452f-a7e1-ad14db6766d4",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b2e4a66-50f5-45f6-acfa-0a175673a48a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "502f813c-5559-4279-9eb5-0413fbcf8410",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e05b8900-c7a5-4806-a4b8-4625d9a37812",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${undefined}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "78fbe8ee-5920-41ca-9900-9ee57b047f7a",
+    "name": "Website-aims",
+    "commands": [{
+      "id": "57d41038-e154-4166-beac-1fb7b5b99b3a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44ae89d1-602f-4eeb-b56b-df33b8321e93",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db44ff61-7889-4db6-97c9-eb73ce6a3247",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "69ffc57b-c36d-45f9-bbbd-3995c4f68c8d",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=\"What's the link of AIMS cit?\"]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What's the link of AIMS cit?"
+    }, {
+      "id": "12abbe85-a5a6-4685-a015-d325c4083026",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=\"What's the link of AIMS cit?\"]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "3ea178d6-21f0-41e6-bc48-dae848e7099c",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='AIMS Link of CIT-U?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "AIMS Link of CIT-U?"
+    }, {
+      "id": "0de19da9-ddad-40e3-b26d-66e807a07cf0",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='AIMS Link of CIT-U?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "6eb0e7d4-2fc7-4345-ba69-0e42393527cd",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3394.444580078125)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e8ff520-5900-4a9a-ba93-31bc8801c416",
+      "comment": "",
+      "command": "click",
+      "target": "css=.message:nth-child(4) a",
+      "targets": [
+        ["css=.message:nth-child(4) a", "css:finder"],
+        ["xpath=(//a[contains(text(),'https://cituweb.pinnacle.com.ph/aims/students/')])[2]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[4]/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://cituweb.pinnacle.com.ph/aims/students/')])[2]", "xpath:href"],
+        ["xpath=//div[4]/div[2]/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8895",
+      "windowTimeout": 2000
+    }, {
+      "id": "5dc3cb57-75f8-47c4-b399-a791dcfc0fd8",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a81ea397-3ed4-40ac-aab5-ff3e8b9236f0",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8895}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61a15455-ebfe-4673-84a8-8b123981a571",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "196ddcf3-c8d6-4f01-9aec-0e14feaec734",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86df1976-c114-4e64-b9f5-68838a702e22",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "660fc7e9-aed8-4315-9c46-b307eca7a1ed",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${undefined}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8ff51004-7f12-475f-88bb-e451c941a165",
+    "name": "Website-cit-u",
+    "commands": [{
+      "id": "f012d585-6793-4b8d-bec5-81bbc412861d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a50fa39-4082-424a-a51e-03fb62edfe27",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f0ac646-3621-49b1-b201-d576aa6a335a",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a70269a-04f6-49e9-8a6d-f59779f19b4d",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the website of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What is the website of cit?"
+    }, {
+      "id": "1bf6612a-9799-4db9-9359-c652f87be3c3",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the website of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "32521c4a-1b2d-4de7-98b9-9f5cca8c5faa",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is the main website of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " What is the main website of cit?"
+    }, {
+      "id": "3cd51884-a46f-46d9-bd4b-ead49be4458f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is the main website of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "0f71c377-a470-4df9-b5b5-08b9e1841d5d",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' website of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " website of cit?"
+    }, {
+      "id": "d41dfba3-3113-4b45-9cd7-03e0c578d8d1",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' website of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "22dfb76d-0159-4934-aeda-08964b5076b6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[contains(text(),'http://www.cit.edu')])[3]",
+      "targets": [
+        ["css=.message:nth-child(6) a", "css:finder"],
+        ["xpath=(//a[contains(text(),'http://www.cit.edu')])[3]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[6]/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://www.cit.edu'])[3]", "xpath:href"],
+        ["xpath=//div[6]/div[2]/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6789",
+      "windowTimeout": 2000
+    }]
+  }, {
+    "id": "0477d92e-048e-4c18-afdf-d4a16f24359a",
+    "name": "Link-Balance-inquiry",
+    "commands": [{
+      "id": "67ea11e1-4ce5-4e2b-8845-e481ef5a039d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b7b41cb-9d46-4aaf-b297-2a451eec62a7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f5732b0-5ddc-48fc-89ec-57d4af61db9d",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38b46cf5-3f50-4bf9-8440-a584661ce2ef",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=\"What's the link for balance inquiry?\"]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What's the link for balance inquiry?"
+    }, {
+      "id": "c91987fe-c135-4bb2-8b7a-d8a88a870d05",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=\"What's the link for balance inquiry?\"]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c5207f11-ec77-4868-b17d-5afb1fdaf8cf",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Balance inquiry link']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Balance inquiry link"
+    }, {
+      "id": "6e0f8d18-1a18-4c11-aa01-7ee91156b1e1",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Balance inquiry link']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "3f7c642c-abb9-4c07-aad4-4a2f8ae82448",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3394.444580078125)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "744237ac-460e-4ec5-8b64-a74a53850d0b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.message:nth-child(4) a",
+      "targets": [
+        ["css=.message:nth-child(4) a", "css:finder"],
+        ["xpath=(//a[contains(text(),'https://bit.ly/CITU-FAO-Inquiry')])[2]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[4]/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://bit.ly/CITU-FAO-Inquiry')])[2]", "xpath:href"],
+        ["xpath=//div[4]/div[2]/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win623",
+      "windowTimeout": 2000
+    }, {
+      "id": "b21f4515-f5a9-49fb-b53a-ef5e066f19e1",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "162dd147-0962-41ed-808d-a6d3745c83a9",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win623}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49915f18-722e-4238-b99f-6edaed86a496",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b693d0d9-e608-4d30-838a-2f1c409c4bbb",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc6bc227-3025-44b9-a1f5-03414c7ff0bc",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c52ed7f-f9b4-492d-a694-7692ee0ac7c0",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${undefined}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7acc6275-7ab2-44e7-b080-0506f0081a7e",
+    "name": "Link-proof-payment",
+    "commands": [{
+      "id": "11ac991a-ea65-43d9-bfbc-745cea39b81d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbbfecb9-80ff-4bb3-9067-35de2a612020",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08ed30c1-67eb-434f-94a9-b8bdff1da28a",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='W']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9a7021a-982b-4317-868b-88a86b33cbfa",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the link for proof of payment?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What is the link for proof of payment?"
+    }, {
+      "id": "5aca03d1-4038-4478-88ce-d49a4ba5fbad",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the link for proof of payment?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "fdcf6873-10ac-4871-906a-88f92fa551a5",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=\"What's the link for proof of payment?\"]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What's the link for proof of payment?"
+    }, {
+      "id": "c3795f1b-de0a-4233-8342-8dde3ed4290e",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=\"What's the link for proof of payment?\"]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "bee774bd-6af9-410f-984b-bf6f129fffe0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3394.444580078125)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a197040-3c85-448c-9419-a106806a6b15",
+      "comment": "",
+      "command": "click",
+      "target": "css=.message:nth-child(4) a",
+      "targets": [
+        ["css=.message:nth-child(4) a", "css:finder"],
+        ["xpath=(//a[contains(text(),'http://bit.ly/SendPaymentProof')])[2]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[4]/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://bit.ly/SendPaymentProof'])[2]", "xpath:href"],
+        ["xpath=//div[4]/div[2]/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8474",
+      "windowTimeout": 2000
+    }, {
+      "id": "d45e6fff-5ac8-44ee-9ecb-132b00825857",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5b90813-0cc5-4c89-9673-1ba377922f43",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8474}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62e9adbe-afd6-416f-b73a-3c88078248ad",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebb7b35b-61c8-434d-81fb-4c9e7de2ea6f",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1b7e94a-c187-4c89-a2ee-ed741735e837",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "303b741e-7df5-4eab-943c-c4f471ef2725",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${undefined}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ae94addb-9012-476b-a623-8fa4adf0fc97",
+    "name": "Address-of-cit-u",
+    "commands": [{
+      "id": "4ca02b2d-6a68-4d32-a074-73005470cc46",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "07b3a6dd-4f58-4438-962d-08f40e0d09e8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eafbed0f-c767-45ee-ab04-a24183d36b91",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "196ca887-2775-4cb3-9525-3166136c5760",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the address of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What is the address of cit?"
+    }, {
+      "id": "8406f3cf-677a-4db7-ad97-0478d2dae065",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the address of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "163066fe-10ca-47c1-8ee7-5552b5d502b2",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Address of cit u?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Address of cit u?"
+    }, {
+      "id": "1e9ab2ad-7430-4dd6-925a-8156a1240c64",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Address of cit u?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "9333254b-988e-4ed2-ab21-0a657c2ce844",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Where to locate cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Where to locate cit?"
+    }, {
+      "id": "a9817436-1587-49ec-97d5-99cd51525357",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Where to locate cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "5ad635f0-1ec9-44a2-920d-5cdf7d11edfe",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ace3a6cc-fd53-4947-92d9-c886ce9f0cb4",
+    "name": "department-heads",
+    "commands": [{
+      "id": "41e49f6a-4e26-4f23-9698-ca2d14f9eafd",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "535265a1-ecde-49f9-9c63-90fce8b62712",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1cd3f8e7-bcc3-4fd5-a813-a70d43bfaa89",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1d8fed6-b829-4254-8672-5f0df3362455",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28cccf18-da0c-4078-ad3b-958573697b2c",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Head and Secretary of COA?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Head and Secretary of COA?"
+    }, {
+      "id": "0b64f44b-f2d1-4747-8d0a-672827fbfeb5",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Head and Secretary of COA?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "559ee889-ea4f-42ae-b9e5-8a3a8e6ce9be",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Who is the head and secretary of COA?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Who is the head and secretary of COA?"
+    }, {
+      "id": "414a4b88-7ce8-4208-8f90-421a33bcf919",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Who is the head and secretary of COA?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f59561ea-8077-4ca7-8938-36c31df68888",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c727b81f-3d63-4185-8a54-f3ed58321f47",
+      "comment": "",
+      "command": "click",
+      "target": "css=.App",
+      "targets": [
+        ["css=.App", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "337e1bab-592f-4dcb-892c-7468ecd22562",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a1edbab4-ec00-48e5-8f5f-340ef68d225e",
+    "name": "contact-number-cit",
+    "commands": [{
+      "id": "9105ec2d-55a2-48a9-adff-479bd9598ca7",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec564b5f-a712-4aac-a24b-760a418af426",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "668fb837-ab82-43f9-a2d8-5a5d64a4a6b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='w']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24016e21-648a-4753-be60-9f19c460d198",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='what is the contact number of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "what is the contact number of cit?"
+    }, {
+      "id": "b0b2740b-ddd1-40d9-95a6-d2596b37455f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='what is the contact number of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "a8679480-034b-43c7-86ec-31b9a056cdf1",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is the contact no. of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " What is the contact no. of cit?"
+    }, {
+      "id": "afb1b3d8-7ccd-4e29-b598-fc2601c5a8bd",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is the contact no. of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "aabbc5c3-d41d-4c59-9afa-f762a4ae7904",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' contact number of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " contact number of cit?"
+    }, {
+      "id": "078a3e44-89eb-4140-876d-15d7e83aa689",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' contact number of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "85bacc6e-ece8-42ed-b8d3-c2d7aeaf70ae",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "45f5d8f0-3af1-46ab-bcbb-9f8fdc89010b",
+    "name": "email-cit",
+    "commands": [{
+      "id": "1f69cb7f-7a0b-4f23-8b75-6064f49caa5c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "206c3df6-a5d1-4881-b262-604e3777320a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "844x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b185239-ecf5-4e63-8895-c62cb081f49f",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='w']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aee6e525-7bae-4bb1-bf1f-de6492613fc1",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='what is the email of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "what is the email of cit?"
+    }, {
+      "id": "a09ae20f-1e48-4ee3-81df-f94e1f287b48",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='what is the email of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "4d5c349e-893b-4be6-a51c-b884a1042bdf",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the main email address of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What is the main email address of cit?"
+    }, {
+      "id": "70b6baea-305c-4221-9713-f1994d150adc",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the main email address of cit?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "db703b51-879c-4e50-807f-f681782765af",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7ff4506a-9d06-4539-ba60-8cf0b4a72388",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b4c8b592-1904-4f38-a5b0-f8f780848bba"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}

@@ -46,7 +46,7 @@ section .intro {
     max-width: 600px;
     height: auto;
     padding-right: 5em;
-    padding-top: 15px;
+    padding-top: 100px;
 }
 
 .description .content a {

@@ -8,6 +8,7 @@
   font-family: 'Poppins', sans-serif;
   display: grid;
   place-items: center;
+  margin-bottom: 400px;
 }
 
 body {

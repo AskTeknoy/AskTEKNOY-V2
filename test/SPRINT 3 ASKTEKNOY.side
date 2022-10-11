@@ -1,0 +1,1562 @@
+{
+  "id": "b5f57b7d-9a2e-42e5-8e70-87585abf1cba",
+  "version": "2.0",
+  "name": "SPRINT 3 ASKTEKNOY",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "852c5d78-7a28-489d-b15e-58372552cb4d",
+    "name": "Bot Image Response Location ",
+    "commands": [{
+      "id": "15ee7671-b581-45d0-8b39-23a2b19ab0b7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c7373b0-8ad3-48f2-bbc3-db0551fe5b5d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5ea4cdf-774f-4328-ab4a-4b17fb7a8263",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Start Chatting Now ➜",
+      "targets": [
+        ["linkText=Start Chatting Now ➜", "linkText"],
+        ["css=.content > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Chatting Now ➜')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/chatbot')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Chatting Now ➜')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e5e1bc4-319e-4f8c-9043-d4ee0fc18081",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0196ca3-ff41-493b-9023-f41861c58a1e",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Where is the CpE Deparment?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Where is the CpE Deparment?"
+    }, {
+      "id": "52a3b476-8222-464c-971a-f63d57c76361",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Where is the CpE Deparment?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "22e4e400-865e-4797-8583-bbf9f2283575",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68151211-6d81-4780-9adc-53d1cd300c12",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Where is the e-Learning Competency and Research Center located?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Where is the e-Learning Competency and Research Center located?"
+    }, {
+      "id": "47810014-3f26-4164-9169-02a5378060ca",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Where is the e-Learning Competency and Research Center located?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c7248848-f396-4e76-afc6-88ec2aef920f",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9045da10-4f77-4ae0-9eeb-6d61ad4f7352",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Where is the college library located?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Where is the college library located?"
+    }, {
+      "id": "19f5e46e-aa98-44e2-aa22-3c9db4d9fa22",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Where is the college library located?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "e2518cb9-e854-4a89-9700-a00e1ad85bdf",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2819b74-d94b-4c7e-bdb6-ec83bc741599",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Location of University Registrar']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Location of University Registrar"
+    }, {
+      "id": "04674841-efe2-4b3e-8f65-da653493d479",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Location of University Registrar']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "26e83f43-fb47-495c-8832-64be94df5719",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9c192a3-17d7-431a-92d8-fb264da61f65",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Where is the New Academic Building?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Where is the New Academic Building?"
+    }, {
+      "id": "84906a97-a524-475c-8ae8-38d5971388f6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Where is the New Academic Building?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "b9f4b659-ebf3-44f0-b390-3b6c916e3c39",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'➤')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba8d810e-3661-4aa0-b10c-24ba46acb282",
+      "comment": "",
+      "command": "click",
+      "target": "css=.chat-window",
+      "targets": [
+        ["css=.chat-window", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c32f58af-0ae7-4c45-a007-c4b5f1ac67f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32c06a90-d7f0-4827-84a0-aa7887229089",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Where is the Networking and Linkages Office?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Where is the Networking and Linkages Office?"
+    }, {
+      "id": "523c0fc6-ba2e-49f6-9a06-af2649504b5b",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Where is the Networking and Linkages Office?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "878cd9ac-d4f0-44c7-893e-7a126e423266",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5d313d0e-e7b4-4ca7-bd74-d0b3a1d04d36",
+    "name": "Email Copied to clipboard",
+    "commands": [{
+      "id": "40a25f6d-6a1f-4384-a79f-69b86a303516",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0306404b-fe6d-400b-9424-f3b1179e8581",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fd65c48-59e4-47ef-b958-1961f31b5295",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Start Chatting Now ➜",
+      "targets": [
+        ["linkText=Start Chatting Now ➜", "linkText"],
+        ["css=.content > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Chatting Now ➜')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/chatbot')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Chatting Now ➜')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53e920c5-3f88-4e49-a6ec-be37b03c8f07",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d8e92d5-af85-47dd-8e5f-23c9aa467dde",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the email address of the Enrolment Technical Office?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What is the email address of the Enrolment Technical Office?"
+    }, {
+      "id": "77f97bf5-e78c-4f13-8a93-89e759ef67b8",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the email address of the Enrolment Technical Office?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "1c859533-90c6-47ae-b4bb-807c916bbfb0",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60dcc27c-d3ea-48ba-bf22-debc6bc759fe",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is the email of ETO?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " What is the email of ETO?"
+    }, {
+      "id": "d1c9e141-c70a-4b0a-bfc9-a5de44fa809e",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is the email of ETO?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "aab5a15a-ff23-40dd-af3d-a1dde43735f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.message:nth-child(4) a:nth-child(4)",
+      "targets": [
+        ["css=.message:nth-child(4) a:nth-child(4)", "css:finder"],
+        ["xpath=(//a[contains(text(),'eto@cit.edu')])[2]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[4]/div[2]/a[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edf017c9-c579-4c1f-b6b3-22640df9cc50",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Button-module_--primary__1ZLkB",
+      "targets": [
+        ["css=.Button-module_--primary__1ZLkB", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='stfDialogPlace']/div/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26de2924-3c34-4780-9319-0dda79d6a993",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "107427aa-17b2-4e4b-95be-f750c476cde7",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0414c8e-7856-49b7-9036-61535870e697",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the email address of SAO?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What is the email address of SAO?"
+    }, {
+      "id": "0b4e1683-62f7-4e5a-a52e-fe0eb9a451d8",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the email address of SAO?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "d8432b6f-086d-47e3-8ac8-c7ef43432605",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=sao@cit.edu",
+      "targets": [
+        ["linkText=sao@cit.edu", "linkText"],
+        ["css=.message:nth-child(6) a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'sao@cit.edu')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[6]/div[2]/a[3]", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'sao@cit.edu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f19c5f63-a258-425b-b0bd-601552637eb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Button-module_--primary__1ZLkB",
+      "targets": [
+        ["css=.Button-module_--primary__1ZLkB", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='stfDialogPlace']/div/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffa29efb-bc52-4741-911e-b42d340de725",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39a86593-8bd7-420a-a4de-5795b525d051",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Email address of Cebu Institue of Technology']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Email address of Cebu Institue of Technology"
+    }, {
+      "id": "4f62fd9e-db80-4b37-8d30-50d2b70ae691",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Email address of Cebu Institue of Technology']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "313e8d6d-2d14-44f8-b61d-a4b54db5a51a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=info@cit.edu",
+      "targets": [
+        ["linkText=info@cit.edu", "linkText"],
+        ["css=.message:nth-child(8) a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'info@cit.edu')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[8]/div[2]/a[3]", "xpath:idRelative"],
+        ["xpath=//div[8]/div[2]/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'info@cit.edu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c349868a-b73a-4f04-a43e-95ca36515ec0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Button-module_--primary__1ZLkB",
+      "targets": [
+        ["css=.Button-module_--primary__1ZLkB", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='stfDialogPlace']/div/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe664bf1-8de0-496b-91cc-b2a2c3a32813",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1d4fb58a-a1c0-452f-a123-8fe969beaa36",
+    "name": "Send feedback request",
+    "commands": [{
+      "id": "df57d3aa-284d-4a93-a605-5e645aa507db",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08117575-45a8-49e3-a80d-96066f662283",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c2d9dc4-abb3-419c-9a6e-d49759d5dce3",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/section/div[4]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b4db589-c6dd-4f7c-80d5-24c1931ff27f",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='kimdariuspanis@gmail.com']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/section/div[4]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "kimdariuspanis@gmail.com"
+    }, {
+      "id": "cf2985e6-6d84-42e7-86da-6dac36c154c0",
+      "comment": "",
+      "command": "type",
+      "target": "css=textarea",
+      "targets": [
+        ["css=textarea", "css:finder"],
+        ["xpath=//div[@id='root']/div/section/div[4]/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "The chatbot is very fun, it replies the school query related questions. I ask for cpe course syllabus and it sends the pdf file course."
+    }, {
+      "id": "22df0f7d-3973-4f1f-b2fa-72fda9a1417d",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//div[@id='root']/div/section/div[4]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Send feedback')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2836008a-7ed7-475d-8c3d-44d826b1d9da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.anticon-close > svg",
+      "targets": [
+        ["css=.anticon-close > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b758232-f1e7-4d8a-9f6b-f3f11ceb8ce2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3d3da7aa-2eec-4216-bf45-0a5801272e61",
+    "name": "Contact team input field",
+    "commands": [{
+      "id": "47bdd623-94f4-4442-84fa-c11cf32fe9cf",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d89caffa-6fe9-4338-adf5-c78e6edc47ed",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "340fab6c-d463-46ad-9d6e-0b2f2420d382",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Contact",
+      "targets": [
+        ["linkText=Contact", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/contacts')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Contact')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d146150a-9b50-4f4b-8358-33e92d50178e",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(1)",
+      "targets": [
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49e5a33a-6a88-4e70-a4df-266d48221f61",
+      "comment": "",
+      "command": "type",
+      "target": "css=input:nth-child(1)",
+      "targets": [
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Kim darius panis']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Kim darius panis"
+    }, {
+      "id": "7682bd94-8b24-4166-971e-61fa278ba2f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(2)",
+      "targets": [
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c9f8443-bd93-45fd-a111-d52095dcca97",
+      "comment": "",
+      "command": "type",
+      "target": "css=input:nth-child(2)",
+      "targets": [
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='kimdariuspanis@gmail.com']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "kimdariuspanis@gmail.com"
+    }, {
+      "id": "a8f2ba70-bbc6-4b69-b78a-bd8f70b4b10c",
+      "comment": "",
+      "command": "click",
+      "target": "name=Message",
+      "targets": [
+        ["name=Message", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='Message']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9eb82f7e-0fa6-416c-a457-911abcfabdcb",
+      "comment": "",
+      "command": "type",
+      "target": "name=Message",
+      "targets": [
+        ["name=Message", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='Message']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Your chatbot is fun because it replies so fast and i wanted to know more about chatbot, please let me know."
+    }, {
+      "id": "7fba00dc-ee70-4b6f-9557-3a517f445d91",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Send')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5a1abbb-8c2c-479a-bfed-ccf22ab48a50",
+      "comment": "",
+      "command": "click",
+      "target": "css=.anticon-close > svg",
+      "targets": [
+        ["css=.anticon-close > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "289220f2-13bd-430c-a2a6-8ab156b62bdd",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "12caf573-2c57-4417-bcc9-fcffa3c35299",
+    "name": "Course Syllabus PDF ",
+    "commands": [{
+      "id": "c83e5f55-4008-4201-be24-5ce65fca9b19",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67c653e9-3c26-4bb3-9118-02a364db76ff",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68971b0c-7104-4e67-9c5e-cbe0e69408d3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Start Chatting Now ➜",
+      "targets": [
+        ["linkText=Start Chatting Now ➜", "linkText"],
+        ["css=.content > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Chatting Now ➜')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/chatbot')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Chatting Now ➜')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f2aa5de-a9ba-4314-8eae-ab6ae6a43507",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90bd67ff-6c99-471e-96e1-a57b26e0ed7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1760aaa-683a-4aed-b867-2580ab107ec0",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the syllabus of Bachelor of Science in Architecture?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What is the syllabus of Bachelor of Science in Architecture?"
+    }, {
+      "id": "bc269d06-35c5-42b1-b0e6-69e5f60c9615",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What is the syllabus of Bachelor of Science in Architecture?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "2599f4ee-d902-4d88-b998-82d5a24101ac",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=syllabus.architecture.pdf",
+      "targets": [
+        ["linkText=syllabus.architecture.pdf", "linkText"],
+        ["css=.message:nth-child(2) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'syllabus.architecture.pdf')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[2]/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'syllabus.architecture.pdf')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5fd5211-f14f-4d5b-93f0-58b9ec9380d5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=syllabus.architecture.pdf",
+      "targets": [
+        ["linkText=syllabus.architecture.pdf", "linkText"],
+        ["css=.message:nth-child(2) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'syllabus.architecture.pdf')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[2]/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'syllabus.architecture.pdf')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7a2bcff-c7ff-4227-9fc4-6dcf3d1df299",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=syllabus.architecture.pdf",
+      "targets": [
+        ["linkText=syllabus.architecture.pdf", "linkText"],
+        ["css=.message:nth-child(2) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'syllabus.architecture.pdf')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[2]/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'syllabus.architecture.pdf')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0f49b36-f263-4783-9aeb-38e9406081ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b43f75b4-a74a-47a2-8968-834080b73eb9",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is the syllabus of Bachelor of Science in Computer Engineering?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " What is the syllabus of Bachelor of Science in Computer Engineering?"
+    }, {
+      "id": "5886104c-31ff-4d18-9217-3a6b9297a01c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What is the syllabus of Bachelor of Science in Computer Engineering?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "456f8f8f-2cfc-4255-85b9-344b51c538d3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=syllabus.computer.engineering.pdf",
+      "targets": [
+        ["linkText=syllabus.computer.engineering.pdf", "linkText"],
+        ["css=.message:nth-child(4) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'syllabus.computer.engineering.pdf')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[4]/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[5]", "xpath:href"],
+        ["xpath=//div[4]/div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'syllabus.computer.engineering.pdf')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f99365d-c436-4646-b624-502807845942",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfc52140-de63-49ac-9308-55e277998663",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=\" What's the course syllabus of BS EM?\"]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " What's the course syllabus of BS EM?"
+    }, {
+      "id": "df774d73-3490-4c90-8c69-bf1599cd297c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=\" What's the course syllabus of BS EM?\"]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "34e2affe-4db9-4bf5-82e3-b7109fecdb99",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=syllabus.mining.engineering.pdf",
+      "targets": [
+        ["linkText=syllabus.mining.engineering.pdf", "linkText"],
+        ["css=.message:nth-child(6) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'syllabus.mining.engineering.pdf')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div/div[6]/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[7]", "xpath:href"],
+        ["xpath=//div[6]/div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'syllabus.mining.engineering.pdf')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "daea653b-7b91-4fdf-999c-056292eaebea",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc25845f-ee50-437a-989e-82f7a2085f29",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=\" What's the course syllabus of BS Pharmacy?\"]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " What's the course syllabus of BS Pharmacy?"
+    }, {
+      "id": "3e1134d0-5a96-4608-9632-6babb7aa1c20",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=\" What's the course syllabus of BS Pharmacy?\"]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "142dea58-c7b2-404b-9a87-06bddb73f985",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fa0db2f6-d3b3-48e1-aefc-4b955e589df8",
+    "name": "Web app navigation",
+    "commands": [{
+      "id": "63584889-dc90-4398-add5-ba6810fdfedc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ba1e35a-66de-4a72-9f39-39bc8832a9c0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "924ccbfc-3b7a-42ee-b636-92349824c810",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=About",
+      "targets": [
+        ["linkText=About", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'About')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/about')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'About')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9398394e-e4d7-446a-8b0a-b8d15425db2d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Contact",
+      "targets": [
+        ["linkText=Contact", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/contacts')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Contact')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "565ffbd6-ab9e-4427-970b-31cbc3d47798",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/nav/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd48f9e0-cc08-4727-bd82-54e5796cec87",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=CIT-U Home",
+      "targets": [
+        ["linkText=CIT-U Home", "linkText"],
+        ["css=.home-cit", "css:finder"],
+        ["xpath=//a[contains(text(),'CIT-U Home')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/nav/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://cit.edu/')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'CIT-U Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2dabe4a0-2a8c-4408-bab1-d0e5d18dae47",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "05b53207-8911-4904-8267-fdccd95d79ad",
+    "name": "School Events",
+    "commands": [{
+      "id": "0bef9540-0839-493c-93d5-60bddf80f819",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5e09db6-ccf9-4611-b796-bfb51713e043",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "101092d9-6116-49df-a5b2-f974a6b977fd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Start Chatting Now ➜",
+      "targets": [
+        ["linkText=Start Chatting Now ➜", "linkText"],
+        ["css=.content > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Chatting Now ➜')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/chatbot')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Chatting Now ➜')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "81af4d28-fd6e-4a12-90cb-93844c94c6c0",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "504604a9-d21e-495c-886d-9e65189bc878",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What are the upcoming school events in March?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "What are the upcoming school events in March?"
+    }, {
+      "id": "dd166817-1a75-44f8-b131-851ba6ab28ba",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='What are the upcoming school events in March?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "0f049ea7-cd70-46ec-9ec3-54a8d6dbd136",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d272a979-5973-458b-b22d-889ca6555f34",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Is there any events to be held in October?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Is there any events to be held in October?"
+    }, {
+      "id": "52fc2b32-f269-4680-a335-115ee0564c7a",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' Is there any events to be held in October?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "cc60b166-6451-4297-8dc1-6ffc9b020916",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb18b857-d7d3-48ad-a33f-54e15a5fdb0d",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What events are to be done in September?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " What events are to be done in September?"
+    }, {
+      "id": "04682c63-012a-460e-9fc8-c9609819d42c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' What events are to be done in September?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "092ccfca-a1aa-4b60-9ebd-37792693c1ee",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "68f190ba-bb93-46e2-9909-2fa0e4ce7d17",
+    "name": "Tuition Query",
+    "commands": [{
+      "id": "396f81dc-6f82-4c8b-a49b-fda09f83cedb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a45f804-0f17-4b9d-8f89-f16346660e42",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e8bcb29-0020-4ad9-8abf-8a657eb1e4ea",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Start Chatting Now ➜",
+      "targets": [
+        ["linkText=Start Chatting Now ➜", "linkText"],
+        ["css=.content > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Chatting Now ➜')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/chatbot')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Chatting Now ➜')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eec3259f-8777-44eb-a337-b3c606b0628a",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "124af656-f9dc-421f-95e7-e445795b6acb",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='How much is the tuition for engineering?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "How much is the tuition for engineering?"
+    }, {
+      "id": "8ad79c0b-9555-4b32-86cd-472cac0fc709",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='How much is the tuition for engineering?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "489fad5e-a837-4fcb-be49-84ede651b48a",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fb496a4-fcd1-4301-8148-6403164ab841",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' How much is the tuition per courses?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " How much is the tuition per courses?"
+    }, {
+      "id": "7b5593d5-43e5-43a6-817a-5bc96a725af1",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' How much is the tuition per courses?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "25e0ee75-0004-479d-b903-1c512f96c01f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7bdc7b0e-16e0-4d2a-8324-7aca96967d77",
+    "name": "Exam Dates",
+    "commands": [{
+      "id": "8a77067f-cfc7-4d20-9ade-bb32b903d1b6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca92f9e7-6885-4b1f-86d1-2d3f6b98439c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89e4bd73-8918-49f9-9dcb-5d6865a6ddf8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Start Chatting Now ➜",
+      "targets": [
+        ["linkText=Start Chatting Now ➜", "linkText"],
+        ["css=.content > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Chatting Now ➜')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/chatbot')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Chatting Now ➜')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9351bfce-1b2d-40c8-9e71-3b0f50884d9a",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ade88bf2-4142-4f67-b02d-f1f8071288c7",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Date of final exam for cluster 2']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Date of final exam for cluster 2"
+    }, {
+      "id": "70cb520e-72af-459e-a045-99a57e567744",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Date of final exam for cluster 2']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "a47a028e-7e2d-4512-bacc-347cf6716b24",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e725cebb-21d9-4015-985d-e6a68d407d97",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' \"What is the date of final exam for cluster 1?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " \"What is the date of final exam for cluster 1?"
+    }, {
+      "id": "0d35a1c8-a08b-43b6-9461-14089b122f78",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' \"What is the date of final exam for cluster 1?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "eb26a948-3580-4373-85c8-772315182061",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79070d9d-ca81-4a89-908a-01861cca7e29",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' ']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db5b9e19-737b-4150-9f40-50c59733b950",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' When is the midterm exam for cluster 2?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " When is the midterm exam for cluster 2?"
+    }, {
+      "id": "bde48b51-89d3-47e6-b483-6da0df12f481",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value=' When is the midterm exam for cluster 2?']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "e2180bcf-8957-481a-b7e3-5c6ad075bb55",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0dec714d-c74e-4e40-8c10-1405ab99f3f2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "60ad3824-6b86-4f1c-a54d-59864aebad04",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["852c5d78-7a28-489d-b15e-58372552cb4d"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}

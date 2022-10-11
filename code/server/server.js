@@ -43,7 +43,8 @@ const io = new Server(server, {
 // request to server 
 app.get("/download-pdf", (req, res) => {
 
-    const file = `syllabus/${fileName}`;     
+    const file = __dirname + `\\syllabus\\${fileName}`;  
+    console.log(file);    
     res.download(file);
 }); 
 
@@ -261,13 +262,15 @@ io.on("connection", socket => {
                     // intent.file -> Intent File
                     const modifiedFileName = capitalCase(sentenceCase(intent));
                     console.log(modifiedFileName)
-                    fileName = modifiedFileName + ".pdf" ;   
+                    fileName = intent + ".pdf" ;   
+                    console.log(fileName);
 
                     botMessageContent = {
                         author: "AskTeknoy", 
                         time: time, 
                         typeData: typeData, 
-                        message: response.answer, 
+                        message: response.answer,
+                        modifyName: modifiedFileName,  
                         fileName: fileName,
                         imageURL: null            
                     }   

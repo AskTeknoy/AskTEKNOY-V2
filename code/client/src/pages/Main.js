@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import validator from 'email-validator'; 
 import { Alert } from 'antd'; 
 import { Offline, Online } from "react-detect-offline";
+import { useSpeechSynthesis } from 'react-speech-kit'; 
 
 // styles 
 import 'antd/dist/antd.css';
@@ -22,6 +23,8 @@ const Main = ({socket}) => {
     const [isNotValidEmail, setIsNotValidEmail] = useState(false); 
 
     const FeaturesRef = useRef(null); 
+
+    const { cancel } = useSpeechSynthesis(); 
 
     const sendFeedbackMessage = () => {
         if(emailAddress !== "" && feedbackMessage !== ""){
@@ -48,7 +51,7 @@ const Main = ({socket}) => {
 
     useEffect(() => {
         document.title = "AskTeknoy";
-        
+        cancel(); 
         // state firebase fetch data (success or fail)
         socket.on("firebase-feedback", (data) => {
             setIsSuccess(false);
@@ -60,7 +63,7 @@ const Main = ({socket}) => {
             setIsError(!data.isSuccess); 
         });
 
-    }, [socket, setIsSuccess, setIsError])
+    }, [socket, setIsSuccess, setIsError, cancel])
 
     return (
     <section>       

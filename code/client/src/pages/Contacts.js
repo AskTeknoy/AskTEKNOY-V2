@@ -4,6 +4,8 @@ import { Alert } from 'antd';
 import moment from 'moment';
 import validator from 'email-validator'; 
 import { Offline, Online } from "react-detect-offline";
+import { useSpeechSynthesis } from 'react-speech-kit'; 
+
 
 // styles 
 import 'antd/dist/antd.css';
@@ -22,6 +24,8 @@ const Contacts = ({socket}) => {
   const [isSuccess, setIsSuccess] = useState(false); 
   const [isInvalidEmail, setIsInvalidEmail] = useState(false); 
   
+  const { cancel } = useSpeechSynthesis(); 
+
   const saveResponse = async () => {
 
     if(fullName !== "" && emailAddress !== "" && message !== ""){
@@ -54,6 +58,7 @@ const Contacts = ({socket}) => {
 
   
   useEffect(() => {
+    cancel();
     document.title = "AskTeknoy | Contact";
     // contacts from server response (firebase fetch)
     socket.on("firebase-contacts", (dataContacts) => {
@@ -65,7 +70,7 @@ const Contacts = ({socket}) => {
             setIsErrorData(dataContacts.isSuccess);
         }
     })
-  }, [socket])
+  }, [socket, cancel]);
 
   return (
     <>

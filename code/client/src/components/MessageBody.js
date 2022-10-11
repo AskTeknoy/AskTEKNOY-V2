@@ -49,7 +49,7 @@ const Message = ({messageContent, handleClickFile, copyEmailLink, index, author}
                         <a  className="link-content" href="#" 
                             onClick={(e) => { handleClickFile(e)}}>
                             <FontAwesomeIcon icon={faFilePdf} />
-                            {messageContent.fileName}
+                            {messageContent.modifyName}
                         </a>
                     : <></>}
                     

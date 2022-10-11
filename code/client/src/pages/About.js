@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Offline, Online } from "react-detect-offline";
+import { useSpeechSynthesis } from 'react-speech-kit'; 
 
 // static photos 
 import Darius from "./images/team_profiles/darius.jpg"; 
@@ -18,6 +19,8 @@ const About = () => {
   const [IsDisplayJessa, setIsDisplayJessa] = useState(false);
   const [IsDisplayRay, setIsDisplayRay] = useState(false);
   const [IsDisplayStefan, setIsDisplayStefan] = useState(false);
+
+  const { cancel } = useSpeechSynthesis(); 
 
   const developers = [
         {name: 'Kim Darius Panis', role: 'Lead Developer', github: "https://github.com/WhooperDar", fb: "https://www.facebook.com/whooperdrs/", imgFile: Darius, nickName: 'Dars'},
@@ -59,10 +62,12 @@ const About = () => {
   }
 
   useEffect(() => {
+    cancel();
     document.title = "AskTeknoy | About Us";
-  }, [])
+  }, [cancel])
   
   return (
+    
     <>
         <Online>
             <SkeletonAbout></SkeletonAbout>

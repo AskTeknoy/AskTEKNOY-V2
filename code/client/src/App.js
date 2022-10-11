@@ -7,12 +7,14 @@ import About from './pages/About';
 import Contacts from './pages/Contacts';
 import MapGoogle from './components/MapGoogle';
 
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // connection to client - server 
 const socket = io("http://localhost:4001", { transports: ["websocket"]}); 
 
 function App() {
+
   return (
     <div>
       <BrowserRouter>
@@ -24,7 +26,7 @@ function App() {
           <Route path='/about' element={<About />}/> 
           <Route path='/location' element={<MapGoogle />}/> 
         </Routes>
-          {/* <Footer /> */}
+          <Footer />
       </BrowserRouter>
     </div>
   );
