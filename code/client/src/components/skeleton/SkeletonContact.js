@@ -11,11 +11,13 @@ const SkeletonContact = () => {
   return (
     <>
         <div className="contact-skeletal">
-           <Skeleton 
-            active={true} 
-            paragraph={{ rows: 3 }} 
-            size={"large"} />
-
+            <div className='para-skeletal'>
+              <Skeleton 
+                active={true} 
+                paragraph={{ rows: 3 }} 
+                size={"large"} />
+            </div>
+           
             <div className='forms-skeletal'>
                 <SkeletonInput active={true} />
             </div>

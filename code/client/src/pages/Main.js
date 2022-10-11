@@ -69,7 +69,7 @@ const Main = ({socket}) => {
                 <div className="description">
                     <div className="content">
 
-                        <h2 className='title-intro'>Start chatting with the new university inquiry bot</h2>
+                        <h2 className='title-intro'>Start chatting with the new university inquiry <span className='chatbot-title'>chatbot</span></h2>
                         <p>Do you have unanswered questions regarding school matters that require an immediate response? Try asking AskTeknoy! It is a trained university chatbot that provides a reliable and 24/7 customer support to help students, parents, teachers or any individual who have questions and concerns about CIT-U.</p>
                         <Link to="/chatbot">Start Chatting Now &#10140;</Link>
                     </div>
@@ -151,12 +151,8 @@ const Main = ({socket}) => {
         <div className="how-to-use">
             <div className="how-description">
                 <h2>How to use?</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque ea, consequuntur eius enim odio, in
-                    est placeat possimus cumque nesciunt voluptate modi eveniet sequi. Exercitationem facilis nam magnam
-                    ni</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab a rem non tenetur!si veritatis sapiente
-                    voluptates, qui minus maxime eos doloremque, perspiciatis, possimus
-                    praesentium!</p>
+                <p>Before clicking on to this website, A stable internet connection is a must. Then go to https://www.askteknoy.com to the official homepage of AskTeknoy to see the about page, overview and features of this webapp.</p>
+                <p>At the side you can see a chatbot, please click on the chatbot and It will send you greetings . Input your inquiries there in the textbox below or use the built-in microphone from the chatbot regarding the university After inputting your inquiries, please click send and the chatbot will generate a text-to-speech in responding to your inquiries and will give you the right response!</p>
             </div>
             <div className="how-img">
                 <img src={require("./images/logo/how-to-use.png")} alt="Chat System"/>

@@ -35,6 +35,7 @@ body {
   border-radius: 15px 15px 0 0; 
   background: #971921;
   position: relative;
+  user-select: none;
 }
 
 .chat-window .chat-header .img-chat img {
@@ -110,7 +111,7 @@ body {
   height: auto;
   padding: 7px;
   display: flex;
-  flex-direction: row;
+
 }
 
 .chat-window .chat-body .message .message-content {

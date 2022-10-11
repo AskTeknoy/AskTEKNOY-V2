@@ -275,7 +275,7 @@
 
 
     .how-to-use .how-description p {
-        font-size: 12px;
+        font-size: 16px;
         line-height: 30px;
     }
 
@@ -283,8 +283,6 @@
         font-size: 45px;
         line-height: 30px;
     }
-
-
 }
 
 @media only screen and (max-width: 711px) {
@@ -311,6 +309,9 @@
         padding: 5px 0;
     }
 
+    .chatbot-title { 
+        color: #971921;
+    }
 
     .circle { 
         margin-top: 14%;
@@ -327,7 +328,7 @@
     }
     
     .description .content p {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .description .circle-container img {
@@ -368,12 +369,13 @@
     }
 
     .how-to-use .how-description h2{
-        font-size: 40px;
+        font-size: 45px;
+        margin-bottom: 1.5em;
     }
 
     .how-to-use .how-description p {
         max-width: 650px;
-        font-size: 13px;
+        font-size: 16px;
     }
 
     /* chat section */

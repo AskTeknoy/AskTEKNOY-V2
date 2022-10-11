@@ -24,7 +24,7 @@ const About = () => {
         {name: 'Khyle Cardosa', role: 'UI/UX Designer', github: "https://github.com/kvcards26", fb: "https://www.facebook.com/kvcards26", imgFile: Khyle, nickName: 'Khyle'},
         {name: 'Jessa Macapagong', role: 'Scrum Master', github: "https://github.com/jmacapagong", fb: "https://www.facebook.com/jmacapagong", imgFile: Jessa, nickName: 'Jessa'},
         {name: 'Rheaynne Ray Eduyan', role: 'Product Owner', github: "https://github.com/rheaynne", fb: "https://www.facebook.com/rheaynneeduyan", imgFile: Rheaynne, nickName: 'Ray'},
-        {name: 'Stefan James Tudtud', role: 'Product Owner', github: "https://github.com/jamestudtud13", fb: "https://www.facebook.com/stefanjames.tud2d", imgFile: Stefan, nickName: 'Stefan'},
+        {name: 'Stefan James Tudtud', role: 'Quality Assurance Manager', github: "https://github.com/jamestudtud13", fb: "https://www.facebook.com/stefanjames.tud2d", imgFile: Stefan, nickName: 'Stefan'},
   ]
 
   const displayAboutInfo = (profile) => {
