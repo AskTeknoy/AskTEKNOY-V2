@@ -2,13 +2,13 @@
 
 section {
     padding: 40px;
+    user-select: none;
 }
 
 section .intro {
     padding-bottom: 0;
     margin-bottom: 0;
 }
-
 
 .description { 
     margin-top: 30px;
@@ -60,11 +60,14 @@ section .intro {
     line-height: 1.5;
     transition: 0.5s;
     text-decoration: none;
+    user-select: none;
+
 }
 
 .description .content a:hover {
     background-color: #FBD43E;
     color: #971921;
+
 }
 
 .circle { 
@@ -90,6 +93,7 @@ section .intro {
     text-align: center;
     margin-bottom: 1.5em;
     font-weight: 700;
+    user-select: none;
 }
 
 .features {
@@ -99,12 +103,11 @@ section .intro {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    user-select: none;
 }
 
 .features:hover {
-    color: #971921;
-    cursor: pointer;
-    box-shadow: 7px 0 0 0 inset;
+    user-select: none;
 }
 
 .features-container {

@@ -313,6 +313,7 @@
 
 
     .circle { 
+        margin-top: 14%;
         clip-path: circle(30% at center 2%);
     }
 

@@ -68,7 +68,6 @@ const Main = ({socket}) => {
             <div className='intro'>
                 <div className="description">
                     <div className="content">
-                        {/* skeleton */}
 
                         <h2 className='title-intro'>Start chatting with the new university inquiry bot</h2>
                         <p>Do you have unanswered questions regarding school matters that require an immediate response? Try asking AskTeknoy! It is a trained university chatbot that provides a reliable and 24/7 customer support to help students, parents, teachers or any individual who have questions and concerns about CIT-U.</p>

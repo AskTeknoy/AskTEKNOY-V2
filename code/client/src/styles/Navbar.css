@@ -22,7 +22,7 @@ nav {
     padding: 0 40px 0;
 }
 
-nav .logo { 
+.logo { 
     position: relative;
     font-size: 30px;
     font-weight: 800;
@@ -80,6 +80,7 @@ nav ul li .home-cit {
     font-weight: 700;   
     transition: 0.5s;
 }
+
 nav ul li .home-cit:hover {
     position: relative;
     background-color: #FBD43E;
@@ -89,4 +90,100 @@ nav ul li .home-cit:hover {
     border: 1px solid #971921;
     cursor: pointer;
     font-weight: 700;   
+}
+
+/* 
+// responsive nav bar */
+.nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #971921;
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) { 
+    .nav-btn {
+        color: #fff;
+    }
+ 
+    /* navagation icon */
+    .nav-color { 
+        color: #971921;
+    }
+
+    .nav-color:hover, .nav-close-btn:hover { 
+        transform: scale(1.2);
+    }
+
+
+    nav ul li a{ 
+        color: rgb(215, 211, 211);
+        font-size: 25px;
+    }
+
+    nav ul li a:hover { 
+        color: #ffffff;
+        font-size: 25px;
+
+    }
+
+    nav ul li a:focus{ 
+        font-weight: 800;
+        color: #fff;
+    }
+    
+    nav ul li .home-cit { 
+        border: 1px solid rgb(118, 31, 31);
+        color:rgb(215, 211, 211);
+    }
+
+    /* on when clicked */
+    .nav-btn {
+		visibility: visible;
+		opacity: 1;
+        display: block;
+	}
+
+    nav ul {
+        position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+        gap: 1.5rem;
+		background-color: #971921;
+		transition: 1s;
+		transform: translateY(-100vh);
+        color: #ffff;
+        z-index: 9999999;
+    }
+
+    .responsive_nav {
+		transform: none;
+	}
+
+    .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 3rem;
+        padding: 2rem;
+	}
+}
+
+@media only screen and (max-width: 874px) {
+
+
+    .responsive_nav {
+		transform: none;
+	}
 }
